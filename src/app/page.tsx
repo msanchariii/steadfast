@@ -7,7 +7,7 @@ import Testimonial from "@/components/sections/Testimonial";
 
 export default function Home() {
     return (
-        <main className="xl:space-y-32">
+        <main className="xl:space-y-32 bg-zinc-200">
             <Hero />
             <Testimonial />
             <Showcase />
