@@ -9,7 +9,7 @@ const Navlink = ({ label = "Home", href = "#" }) => {
 
     const onMouseEnter = () => {
         gsap.to(labelRef.current, {
-            margin: "0 0.6rem",
+            margin: "0 0.5rem",
             duration: 0.2,
         });
     };
@@ -29,7 +29,7 @@ const Navlink = ({ label = "Home", href = "#" }) => {
             onMouseLeave={onMouseLeave}
         >
             [
-            <span ref={labelRef} className="nav-label">
+            <span ref={labelRef} className="nav-label mx-[0.2rem]">
                 {label}
             </span>
             ]
