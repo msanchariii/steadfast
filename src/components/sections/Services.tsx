@@ -3,10 +3,10 @@ import ContactCardInServiceSection from "../ServiceCards";
 
 const Services = () => {
     return (
-        <section className="min-h-dvh relative container mx-auto my-12 px-12">
+        <section className="relative container mx-auto my-12 min-h-dvh px-12">
             <h2 className="sr-only">Services</h2>
-            <h2 className="font-semibold mb-6">[Services]</h2>
-            <h1 className="tracking-tight leading-12 xl:leading-16 text-wrap text-4xl md:text-5xl xl:text-6xl font-bold xl:max-w-4xl mb-16">
+            <h2 className="mb-6 font-semibold">[Services]</h2>
+            <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
                 Not just services - we deliver growth, clarity, and real impact.
             </h1>
             <div>
@@ -51,11 +51,11 @@ const Services = () => {
 const ServiceCards = ({ title = "Title", desc = "Desc" }) => {
     return (
         <div>
-            <div className="flex flex-col xl:flex-row justify-between items-center relative container mx-auto my-4 py-10 px-12 bg-white rounded-lg ">
-                <h3 className="mb-4 w-full xl:max-w-fit xl:mb-0 text-left tracking-tight max-w-lg font-bold text-2xl xl:order-2">
+            <div className="relative container mx-auto my-4 flex flex-col items-center justify-between rounded-lg bg-white px-12 py-10 xl:flex-row">
+                <h3 className="mb-4 w-full max-w-lg text-left text-2xl font-bold tracking-tight xl:order-2 xl:mb-0 xl:max-w-fit">
                     {title}
                 </h3>
-                <p className="font-medium text-xs max-w-md text-zinc-600">
+                <p className="max-w-md text-xs font-medium text-zinc-600">
                     {desc}
                 </p>
             </div>

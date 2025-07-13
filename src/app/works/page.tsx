@@ -4,9 +4,9 @@ import React from "react";
 
 const WorkPage = () => {
     return (
-        <div className="container mx-auto px-6 md:px-12 py-8 lg:py-16 xl:py-20  bg-zinc-100 rounded-4xl">
-            <div className="mx-auto flex flex-col md:flex-row justify-between gap-8 md:items-end">
-                <h2 className="font-bold text-5xl sm:text-7xl md:text-9xl">
+        <div className="container mx-auto rounded-4xl bg-zinc-100 px-6 py-8 md:px-12 lg:py-16 xl:py-20">
+            <div className="mx-auto flex flex-col justify-between gap-8 md:flex-row md:items-end">
+                <h2 className="text-5xl font-bold sm:text-7xl md:text-9xl">
                     Work
                 </h2>
                 <p className="max-w-md text-xs md:py-2">
@@ -15,7 +15,7 @@ const WorkPage = () => {
                     quos qui dolorem ipsum itaque officiis soluta?
                 </p>
             </div>
-            <div className="mt-16 lg:mt-24  space-y-16 md:space-y-12">
+            <div className="mt-16 space-y-16 md:space-y-12 lg:mt-24">
                 {workData.map((work) => (
                     <WorkCard key={work.id} work={work} />
                 ))}
@@ -26,9 +26,9 @@ const WorkPage = () => {
 
 const WorkCard = ({ work }: { work: Work }) => {
     return (
-        <div className="flex flex-col flex-wrap lg:flex-row py-4 text-left">
-            <div className="w-full lg:w-1/2 flex flex-col">
-                <h3 className="text-2xl font-bold text-left w-full mb-4">
+        <div className="flex flex-col flex-wrap py-4 text-left lg:flex-row">
+            <div className="flex w-full flex-col lg:w-1/2">
+                <h3 className="mb-4 w-full text-left text-2xl font-bold">
                     {work?.title},{" "}
                     <span className="text-base text-zinc-500">2018</span>
                 </h3>
@@ -36,14 +36,14 @@ const WorkCard = ({ work }: { work: Work }) => {
                     {work.description}
                 </p>
                 <Link href={work.liveUrl || work.sampleUrl || "#"}>
-                    <button className="py-2 px-3 bg-slate-900 text-white rounded-md mt-12 hover:bg-slate-800 transition-colors duration-300 w-fit text-sm">
+                    <button className="mt-12 w-fit rounded-md bg-slate-900 px-3 py-2 text-sm text-white transition-colors duration-300 hover:bg-slate-800">
                         {work?.liveUrl ? "View Live" : "View Sample"}
                     </button>
                 </Link>
             </div>
-            <div className="w-full lg:w-1/2 flex flex-col sm:flex-row gap-4 mt-12 lg:mt-0">
-                <div className="w-full lg:w-1/2 aspect-video rounded-xl bg-zinc-900"></div>
-                <div className="w-full lg:w-1/2 aspect-video rounded-xl bg-zinc-900"></div>
+            <div className="mt-12 flex w-full flex-col gap-4 sm:flex-row lg:mt-0 lg:w-1/2">
+                <div className="aspect-video w-full rounded-xl bg-zinc-900 lg:w-1/2"></div>
+                <div className="aspect-video w-full rounded-xl bg-zinc-900 lg:w-1/2"></div>
             </div>
         </div>
     );

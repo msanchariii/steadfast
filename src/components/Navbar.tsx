@@ -4,12 +4,9 @@ import Navlink from "./navbar/Navlink";
 
 const Navbar = () => {
     return (
-        <header
-            className="flex justify-between items-center max-w-6xl mx-auto
-        "
-        >
+        <header className="mx-auto flex max-w-6xl items-center justify-between">
             <h1 className="">Navbar</h1>
-            <ul className="hidden xl:flex gap-x-8 2xl:gap-x-8 text-charcoal font-bold">
+            <ul className="text-charcoal hidden gap-x-8 font-bold xl:flex 2xl:gap-x-8">
                 <Navlink label="Our Works" href="/works" />
                 <Navlink label="Pricing" href="/pricing" />
                 <Navlink label="About" href="/about" />

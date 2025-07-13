@@ -26,13 +26,13 @@ const FAQ = () => {
     }, []);
 
     return (
-        <section className="min-h-dvh px-12 py-12 relative" id="faq-section">
-            <h1 className="text-3xl font-bold max-w-3xl mx-auto mb-4">FAQ</h1>
-            <p className="text-base font-medium italic max-w-3xl mx-auto mb-4">
+        <section className="relative min-h-dvh px-12 py-12" id="faq-section">
+            <h1 className="mx-auto mb-4 max-w-3xl text-3xl font-bold">FAQ</h1>
+            <p className="mx-auto mb-4 max-w-3xl text-base font-medium italic">
                 Some common questions we get
             </p>
 
-            <div className="w-full max-w-3xl mx-auto">
+            <div className="mx-auto w-full max-w-3xl">
                 {faqs.map((faq) => (
                     <Accordion key={faq.id} type="single" collapsible>
                         <AccordionItem value={`item-${faq.id}`}>

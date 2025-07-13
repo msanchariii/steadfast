@@ -9,7 +9,7 @@ import { GsapProvider } from "@/context/GsapProvider";
 
 export default function Home() {
     return (
-        <main className="xl:space-y-32 bg-zinc-100">
+        <main className="bg-zinc-100 xl:space-y-32">
             <GsapProvider>
                 <Hero />
                 <Testimonial />

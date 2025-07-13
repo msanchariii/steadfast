@@ -18,14 +18,14 @@ const Testimonial = () => {
 
     const handlePrev = (e: React.MouseEvent<HTMLButtonElement>) => {
         setCurrentTestimonial((prev) =>
-            prev === 0 ? testimonialData.length - 1 : prev - 1
+            prev === 0 ? testimonialData.length - 1 : prev - 1,
         );
         playPressAnimation(e.currentTarget);
     };
 
     const handleNext = (e: React.MouseEvent<HTMLButtonElement>) => {
         setCurrentTestimonial((prev) =>
-            prev === testimonialData.length - 1 ? 0 : prev + 1
+            prev === testimonialData.length - 1 ? 0 : prev + 1,
         );
         playPressAnimation(e.currentTarget);
     };
@@ -35,7 +35,7 @@ const Testimonial = () => {
             gsap.fromTo(
                 contentRef.current,
                 { autoAlpha: 0, x: 100 },
-                { autoAlpha: 1, x: 0, duration: 0.6, ease: "power2.out" }
+                { autoAlpha: 1, x: 0, duration: 0.6, ease: "power2.out" },
             );
         }
     }, [currentTestimonial]);
@@ -56,7 +56,7 @@ const Testimonial = () => {
                 duration: 0.6,
                 ease: "power2.out",
                 stagger: 0.1,
-            }
+            },
         );
     });
 
@@ -78,14 +78,14 @@ const Testimonial = () => {
         testimonialData[currentTestimonial];
 
     return (
-        <section className="relative container gap-6 text-center flex justify-center items-center flex-col mx-auto my-12 p-6 h-dvh bg-gradient-to-br from-sky-50 via-white to-purple-50 rounded-lg shadow-md">
+        <section className="relative container mx-auto my-12 flex h-dvh flex-col items-center justify-center gap-6 rounded-lg bg-gradient-to-br from-sky-50 via-white to-purple-50 p-6 text-center shadow-md">
             <h2 className="sr-only">Testimonials</h2>
-            <div className="size-16 bg-red-200 mx-auto rounded-full"></div>
+            <div className="mx-auto size-16 rounded-full bg-red-200"></div>
 
             {/* Animated content */}
-            <div className="max-w-3/5 mx-auto" ref={contentRef}>
+            <div className="mx-auto max-w-3/5" ref={contentRef}>
                 <p
-                    className="text-2xl md:text-3xl italic"
+                    className="text-2xl italic md:text-3xl"
                     id="testimonial-text"
                 >
                     <span>"</span>
@@ -100,10 +100,10 @@ const Testimonial = () => {
                 </div>
             </div>
 
-            <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex items-center gap-x-6">
+            <div className="absolute bottom-12 left-1/2 flex -translate-x-1/2 transform items-center gap-x-6">
                 <button onClick={handlePrev}>
                     <ArrowLeft
-                        className="bg-black rounded-full text-white p-1 transform transition duration-200 ease-in-out hover:scale-110 hover:bg-gray-800"
+                        className="transform rounded-full bg-black p-1 text-white transition duration-200 ease-in-out hover:scale-110 hover:bg-gray-800"
                         size={32}
                     />
                 </button>
@@ -112,7 +112,7 @@ const Testimonial = () => {
                     // onClick={(e) => playPressAnimation(e.currentTarget)}
                 >
                     <ArrowRight
-                        className="bg-black rounded-full text-white p-1 transform transition duration-200 ease-in-out hover:scale-110 hover:bg-gray-800"
+                        className="transform rounded-full bg-black p-1 text-white transition duration-200 ease-in-out hover:scale-110 hover:bg-gray-800"
                         size={32}
                     />
                 </button>

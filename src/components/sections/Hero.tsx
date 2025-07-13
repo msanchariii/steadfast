@@ -48,7 +48,7 @@ export default function Hero() {
                     from: "start",
                 },
             },
-            "<0.2"
+            "<0.2",
         );
         tl.from(
             splitDescription.lines,
@@ -62,26 +62,26 @@ export default function Hero() {
                     from: "start",
                 },
             },
-            "<0.2"
+            "<0.2",
         );
     }, []);
 
     return (
         <>
-            <section className="container max-w-6xl mx-auto flex flex-col min-h-[80dvh] w-full justify-center">
+            <section className="container mx-auto flex min-h-[80dvh] w-full max-w-6xl flex-col justify-center">
                 <h1
                     ref={titleRef}
-                    className="text-charcoal tracking-tight leading-16 font-bold text-7xl md:text-9xl"
+                    className="text-charcoal text-7xl leading-16 font-bold tracking-tight md:text-9xl"
                 >
                     SteadFast
                 </h1>
-                <div className="flex flex-col md:flex-row md:justify-between mt-16 text-center py-8 gap-8">
-                    <ul className="text-left flex justify-between gap-8 xl:gap-12">
+                <div className="mt-16 flex flex-col gap-8 py-8 text-center md:flex-row md:justify-between">
+                    <ul className="flex justify-between gap-8 text-left xl:gap-12">
                         <li className="stat-list">
                             <h4 className="text-3xl font-semibold text-black">
                                 99+
                             </h4>
-                            <h4 className="font-normal text-xs">
+                            <h4 className="text-xs font-normal">
                                 Completed Projects
                             </h4>
                         </li>
@@ -89,7 +89,7 @@ export default function Hero() {
                             <h4 className="text-3xl font-semibold text-black">
                                 2+
                             </h4>
-                            <h4 className="font-normal text-xs">
+                            <h4 className="text-xs font-normal">
                                 Years of Experience
                             </h4>
                         </li>
@@ -97,13 +97,13 @@ export default function Hero() {
                             <h4 className="text-3xl font-semibold text-black">
                                 100%
                             </h4>
-                            <h4 className="font-normal text-xs">
+                            <h4 className="text-xs font-normal">
                                 Happy Clients
                             </h4>
                         </li>
                     </ul>
                     <p
-                        className="max-w-xl font-medium tracking-wide text-charcoal/70 text-xs"
+                        className="text-charcoal/70 max-w-xl text-xs font-medium tracking-wide"
                         id="hero-description"
                     >
                         Lorem ipsum dolor sit amet consectetur, adipisicing
@@ -115,7 +115,7 @@ export default function Hero() {
             <div className="relative h-dvh w-full">
                 <Image src={"/hero.webp"} alt="showcase" fill />
             </div>
-            <div className="relative w-full my-24 px-12 flex justify-around items-center gap-4 text-2xl">
+            <div className="relative my-24 flex w-full items-center justify-around gap-4 px-12 text-2xl">
                 {/* skills */}
                 <SiTailwindcss size={48} className="text-sky-400" />
                 <FaReact size={48} className="text-sky-600" />

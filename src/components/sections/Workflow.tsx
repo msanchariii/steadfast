@@ -55,23 +55,23 @@ const Workflow = () => {
                     duration: 0.5,
                     ease: "power2.out",
                 },
-                index * 0.3 // ⏱ Delay per card scroll-wise
+                index * 0.3, // ⏱ Delay per card scroll-wise
             );
         });
     }, []);
 
     return (
-        <section className="min-h-dvh relative container mx-auto my-12 px-12">
+        <section className="relative container mx-auto my-12 min-h-dvh px-12">
             {/* <h2 className="sr-only">Workflow</h2> */}
-            <h2 className="font-semibold mb-6">[Workflow]</h2>
-            <h1 className="tracking-tight leading-12 xl:leading-16 text-wrap text-4xl md:text-5xl xl:text-6xl font-bold xl:max-w-4xl mb-16">
+            <h2 className="mb-6 font-semibold">[Workflow]</h2>
+            <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
                 Not just services - we deliver growth, clarity, and real impact.
             </h1>
             <div
-                className="flex flex-col xl:flex-row justify-between items-center relative container mx-auto my-4 py-10 px-12 rounded-lg"
+                className="relative container mx-auto my-4 flex flex-col items-center justify-between rounded-lg px-12 py-10 xl:flex-row"
                 id="workflow-section"
             >
-                <div className="basis-1/2 h-full p-2">
+                <div className="h-full basis-1/2 p-2">
                     <p className="w-4/5 text-4xl font-bold">
                         No guesswork, just a{" "}
                         <span className="text-charcoal/50">clear path</span>{" "}
@@ -80,11 +80,11 @@ const Workflow = () => {
                         <span className="text-charcoal/50">results.</span>
                     </p>
                 </div>
-                <div className="basis-1/2 relative space-y-2 left-0 right-0 p-2">
+                <div className="relative right-0 left-0 basis-1/2 space-y-2 p-2">
                     {cards.map((card, i: number) => (
                         <WorkflowCard
                             key={i}
-                            ref={(el) => (cardsRef.current[i] = el)}
+                            ref={(el: any) => (cardsRef.current[i] = el)}
                             title={card.title}
                             desc={card.desc}
                             id={card.id}
@@ -108,33 +108,33 @@ const WorkflowCard = React.forwardRef<HTMLDivElement, WorkflowCardProps>(
         return (
             <div
                 ref={ref}
-                className={`workflow-card grid grid-cols-3 grid-rows-2 relative container mx-auto p-8 ${
+                className={`workflow-card relative container mx-auto grid grid-cols-3 grid-rows-2 p-8 ${
                     id === "contact"
-                        ? "bg-black items-center justify-center"
+                        ? "items-center justify-center bg-black"
                         : "bg-white"
                 } h-44 rounded-lg border border-zinc-100`}
             >
                 {id === "contact" ? (
                     <a
                         href="/brooooo"
-                        className="row-span-2 text-white text-3xl font-semibold col-span-full text-center"
+                        className="col-span-full row-span-2 text-center text-3xl font-semibold text-white"
                     >
                         {title}
                     </a>
                 ) : (
                     <>
-                        <p className="font-bold text-2xl text-zinc-600">{id}</p>
-                        <h3 className="mb-4 w-full col-span-2 text-left tracking-tight max-w-lg font-bold text-2xl">
+                        <p className="text-2xl font-bold text-zinc-600">{id}</p>
+                        <h3 className="col-span-2 mb-4 w-full max-w-lg text-left text-2xl font-bold tracking-tight">
                             {title}
                         </h3>
                         {/* <p className="text-transparent">This is workflow card</p> */}
-                        <p className="font-medium text-xs max-w-md text-zinc-600 col-span-full mt-2 h-8">
+                        <p className="col-span-full mt-2 h-8 max-w-md text-xs font-medium text-zinc-600">
                             {desc}
                         </p>
                     </>
                 )}
             </div>
         );
-    }
+    },
 );
 export default Workflow;

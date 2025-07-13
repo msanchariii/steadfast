@@ -4,14 +4,14 @@ import React from "react";
 
 const Showcase = () => {
     return (
-        <div className="flex flex-col justify-center w-full min-h-dvh p-12">
+        <div className="flex min-h-dvh w-full flex-col justify-center p-12">
             <h2 className="sr-only">Showcase</h2>
-            <p className="text-center text-4xl font-bold mb-6 capitalize tracking-tight leading-16">
-                some of the <span className="text-rose-500 ">projects</span>{" "}
+            <p className="mb-6 text-center text-4xl leading-16 font-bold tracking-tight capitalize">
+                some of the <span className="text-rose-500">projects</span>{" "}
                 <br />
                 We have worked on
             </p>
-            <div className="grid grid-cols-1 justify-center items-center place-content-center md:grid-cols-2 gap-12 p-12">
+            <div className="grid grid-cols-1 place-content-center items-center justify-center gap-12 p-12 md:grid-cols-2">
                 <ProjectCard
                     title="Project One"
                     description="This is a brief description of Project One."
@@ -26,8 +26,8 @@ const Showcase = () => {
             {/* <button className="text-black" id="btn">
                 hello
             </button> */}
-            <button className="mx-auto bg-linear-to-br from-purple-600 hover:to-purple-600 to-sky-400 hover:from-sky-400 p-0.5 no-underline rounded-full text-sm font-semibold leading-6 text-white transition-all duration-300 ">
-                <div className="flex space-x-2 items-center rounded-full bg-zinc-950 py-0.5 px-4 ">
+            <button className="mx-auto rounded-full bg-linear-to-br from-purple-600 to-sky-400 p-0.5 text-sm leading-6 font-semibold text-white no-underline transition-all duration-300 hover:from-sky-400 hover:to-purple-600">
+                <div className="flex items-center space-x-2 rounded-full bg-zinc-950 px-4 py-0.5">
                     <span>{`View All`}</span>
                     <ChevronRight className="h-4 w-4 text-white" />
                 </div>
@@ -46,17 +46,17 @@ const ProjectCard = ({
     imageSrc: string;
 }) => {
     return (
-        <div className="xl:w-3/4 mx-auto bg-white rounded-lg overflow-hidden hover:ring-4 p-6 hover:ring-charcoal/10 transition-all duration-300">
+        <div className="hover:ring-charcoal/10 mx-auto overflow-hidden rounded-lg bg-white p-6 transition-all duration-300 hover:ring-4 xl:w-3/4">
             <div className="relative mx-auto aspect-video">
                 <Image
                     src={imageSrc}
                     alt={title}
                     fill
-                    className="object-cover rounded-xl"
+                    className="rounded-xl object-cover"
                 />
             </div>
-            <div className="mt-6 mx-auto">
-                <h3 className="text-xl font-semibold mb-2">{title}</h3>
+            <div className="mx-auto mt-6">
+                <h3 className="mb-2 text-xl font-semibold">{title}</h3>
                 <p className="text-gray-600">{description}</p>
             </div>
         </div>
