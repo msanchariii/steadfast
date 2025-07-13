@@ -26,17 +26,22 @@ const cards = [
         title: "Feedback & Iteration",
         desc: "Gathering insights and feedback to refine our approach, ensuring continuous improvement and alignment with your goals.",
     },
+    {
+        id: "contact",
+        title: "Contact Us",
+        desc: "Ready to start? Get in touch with us to discuss your project and how we can help you achieve your goals.",
+    },
 ];
 const Workflow = () => {
-    const cardsRef = useRef([]);
+    const cardsRef = useRef<Array<HTMLDivElement | null>>([]);
 
     useGSAP(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: "#workflow-section",
                 start: "top top",
-                end: "+=1000", // adjust as needed
-                scrub: true,
+                end: "+=1000",
+                scrub: 1,
                 pin: true,
                 markers: true,
             },
@@ -46,16 +51,12 @@ const Workflow = () => {
             tl.to(
                 card,
                 {
-                    top: index * -85 + "px", // how much to stack upward
+                    top: index * -85 + "px",
                     autoAlpha: 1,
-                    duration: 0.4,
+                    duration: 0.5,
                     ease: "power2.out",
-                    stagger: {
-                        amount: 0.2, // stagger time
-                        from: "start", // start from the first card
-                    },
                 },
-                "<"
+                index * 0.3 // ⏱ Delay per card scroll-wise
             );
         });
     }, []);
@@ -76,7 +77,6 @@ const Workflow = () => {
                     {cards.map((card, i: number) => (
                         <WorkflowCard
                             key={i}
-                            // index={i + 1}
                             ref={(el) => (cardsRef.current[i] = el)}
                             title={card.title}
                             desc={card.desc}
@@ -89,33 +89,42 @@ const Workflow = () => {
     );
 };
 
-const WorkflowCard = ({ id = "01", title = "Title", desc = "Desc", ref }) => {
-    return (
-        <div
-            ref={ref}
-            className="workflow-card grid grid-cols-3 relative container mx-auto p-8 bg-white h-44 rounded-lg border border-zinc-100"
-        >
-            <p className="font-bold text-2xl text-zinc-600">{id}</p>
-            <h3 className="mb-4 w-full col-span-2 text-left tracking-tight max-w-lg font-bold text-2xl">
-                {title}
-            </h3>
-            {/* <p className="text-transparent">This is workflow card</p> */}
-            <p className="font-medium text-xs max-w-md text-zinc-600 col-span-full mt-2 bg-red-50 h-8">
-                {desc}
-            </p>
-        </div>
-    );
+type WorkflowCardProps = {
+    id?: string;
+    title?: string;
+    desc?: string;
+    ref?: React.Ref<HTMLDivElement>;
 };
 
-const WorkflowContactCard = ({ ref }) => {
-    return (
-        <div
-            ref={ref}
-            className="workflow-card grid grid-cols-3 relative container mx-auto p-8 bg-black text-white h-44 rounded-lg border border-zinc-100"
-        >
-            Contact Us
-        </div>
-    );
-};
-
+const WorkflowCard = React.forwardRef<HTMLDivElement, WorkflowCardProps>(
+    ({ id = "01", title = "Title", desc = "Desc" }, ref) => {
+        return (
+            <div
+                ref={ref}
+                className={`workflow-card grid grid-cols-3 relative container mx-auto p-8 ${
+                    id === "contact"
+                        ? "bg-black items-center justify-center"
+                        : "bg-white"
+                } h-44 rounded-lg border border-zinc-100`}
+            >
+                {id === "contact" ? (
+                    <p className="text-white text-3xl font-semibold col-span-full text-center">
+                        {title}
+                    </p>
+                ) : (
+                    <>
+                        <p className="font-bold text-2xl text-zinc-600">{id}</p>
+                        <h3 className="mb-4 w-full col-span-2 text-left tracking-tight max-w-lg font-bold text-2xl">
+                            {title}
+                        </h3>
+                        {/* <p className="text-transparent">This is workflow card</p> */}
+                        <p className="font-medium text-xs max-w-md text-zinc-600 col-span-full mt-2 h-8">
+                            {desc}
+                        </p>
+                    </>
+                )}
+            </div>
+        );
+    }
+);
 export default Workflow;
