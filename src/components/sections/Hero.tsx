@@ -46,7 +46,7 @@ export default function Hero() {
 
     return (
         <>
-            <div className="relative flex min-h-[80dvh] w-full items-center justify-center bg-white dark:bg-black">
+            <div className="relative flex min-h-[90dvh] w-full items-center justify-center bg-white dark:bg-black">
                 <div
                     className={cn(
                         "absolute inset-0",
