@@ -6,6 +6,11 @@ const Showcase = () => {
     return (
         <div className="flex flex-col justify-center w-full h-dvh p-12">
             <h2 className="sr-only">Showcase</h2>
+            <p className="text-center text-4xl font-bold mb-6 capitalize tracking-tight leading-16">
+                some of the <span className="text-rose-500 ">projects</span>{" "}
+                <br />
+                We have worked on
+            </p>
             <div className="grid grid-cols-1 justify-center items-center place-content-center md:grid-cols-2 gap-12 p-12">
                 <ProjectCard
                     title="Project One"
