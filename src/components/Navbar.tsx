@@ -11,7 +11,13 @@ const Navbar = () => {
                 <Navlink label="Pricing" href="/pricing" />
                 <Navlink label="About" href="/about" />
             </ul>
-            <button className="hidden xl:block">Chat with Us</button>
+            <Link
+                href={"/contact"}
+                className="hidden rounded-lg bg-black px-4 py-2 text-white transition-colors duration-300 hover:bg-gray-800 xl:block"
+            >
+                {/* "> */}
+                Chat with Us
+            </Link>
             <button className="block xl:hidden">Hamburger</button>
         </header>
     );
