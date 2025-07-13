@@ -1,15 +1,62 @@
-import React from 'react'
+"use client";
+import gsap from "gsap";
+import React, { useRef } from "react";
 
-const ServiceCards = ({ title = "Title", desc="Desc" }) => {
+const ContactCardInServiceSection = () => {
+    const titleRef = useRef(null);
+    const listRef = useRef(null);
+
+    const onMouseEnter = () => {
+        gsap.to(titleRef.current, {
+            x: -200,
+            autoAlpha: 0,
+            duration: 0.4,
+            ease: "power2.out",
+        });
+        gsap.to(listRef.current, {
+            left: "-50%",
+            duration: 0.4,
+            ease: "power2.out",
+        });
+    };
+
+    const onMouseLeave = () => {
+        gsap.to(titleRef.current, {
+            x: 0,
+            autoAlpha: 1,
+            duration: 0.4,
+            ease: "power2.out",
+        });
+        gsap.to(listRef.current, {
+            left: 0,
+            duration: 0.4,
+            ease: "power2.out",
+        });
+    };
+
     return (
-        <div>
-            <div className="flex flex-row justify-between items-center relative container mx-auto my-12 py-8 px-12 bg-white rounded-lg shadow-lg ">
-                <h2 className="sr-only">Services</h2>
-                <p className="tracking-tight max-w-lg font-bold">{desc}</p>
-                <h1 className="font-semibold  mb-6">{title}</h1>
-            </div>
-        </div>
-    )
-}
+        <div
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            className="overflow-hidden relative flex flex-col text-2xl xl:flex-row justify-between bg-black items-center container mx-auto my-4 py-10 px-12 rounded-lg cursor-pointer"
+        >
+            <h3
+                ref={titleRef}
+                className="font-medium max-w-md text-zinc-100"
+                id="contact-card-in-service-section-title"
+            >
+                Ready To Start ?
+            </h3>
 
-export default ServiceCards
+            <ul
+                ref={listRef}
+                className="relative list-disc font-medium text-zinc-100 w-fit"
+                id="contact-card-in-service-section-list"
+            >
+                <li className="get-in-touch">Get in Touch</li>
+            </ul>
+        </div>
+    );
+};
+
+export default ContactCardInServiceSection;
