@@ -2,10 +2,8 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
-import { animate, stagger } from "motion";
-import { splitText } from "motion-plus";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa6";
 

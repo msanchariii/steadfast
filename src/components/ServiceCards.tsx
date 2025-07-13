@@ -17,6 +17,7 @@ const ContactCardInServiceSection = () => {
             left: "-50%",
             duration: 0.4,
             ease: "power2.out",
+            listStyleType: "none",
         });
     };
 
@@ -31,6 +32,7 @@ const ContactCardInServiceSection = () => {
             left: 0,
             duration: 0.4,
             ease: "power2.out",
+            listStyleType: "disc",
         });
     };
 

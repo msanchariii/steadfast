@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import Showcase from "@/components/sections/Showcase";
 import Testimonial from "@/components/sections/Testimonial";
+import Workflow from "@/components/sections/Workflow";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <Testimonial />
             <Showcase />
             <Services />
+            <Workflow />
             <FAQ />
             {/* <div className="h-dvh"></div> */}
             <Footer />
