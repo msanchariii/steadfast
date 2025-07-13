@@ -1,13 +1,13 @@
 "use client";
-
-import { cn } from "@/lib/utils";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { SplitText } from "gsap/all";
 import { animate, stagger } from "motion";
 import { splitText } from "motion-plus";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa6";
-import * as motion from "motion/react-client";
 
 import {
     SiExpress,
@@ -16,63 +16,110 @@ import {
     SiTailwindcss,
 } from "react-icons/si";
 
+gsap.registerPlugin(SplitText);
+
 export default function Hero() {
-    const containerRef = useRef<HTMLDivElement>(null);
+    const titleRef = useRef<HTMLHeadingElement>(null);
 
-    useEffect(() => {
-        document.fonts.ready.then(() => {
-            if (!containerRef.current) return;
-
-            // Hide the container until the fonts are loaded
-            containerRef.current.style.visibility = "visible";
-
-            const { words } = splitText(
-                containerRef.current.querySelector("h1")!
-            );
-
-            // Animate the words in the h1
-            animate(
-                words,
-                { opacity: [0, 1], y: [10, 0] },
-                {
-                    type: "spring",
-                    duration: 2,
-                    bounce: 0,
-                    delay: stagger(0.05),
-                }
-            );
+    useGSAP(() => {
+        const splitTitle = SplitText.create(titleRef.current, {
+            type: "chars",
         });
+        const splitDescription = SplitText.create("#hero-description", {
+            type: "lines",
+        });
+        const tl = gsap.timeline();
+        tl.from(splitTitle.chars, {
+            duration: 0.7,
+            delay: 0.2,
+            opacity: 0,
+            y: 50,
+            ease: "power2.out",
+            stagger: {
+                amount: 0.2,
+                from: "start",
+            },
+        });
+        tl.from(
+            ".stat-list",
+            {
+                duration: 0.7,
+                opacity: 0,
+                y: 50,
+                ease: "power2.out",
+                stagger: {
+                    amount: 0.2,
+                    from: "start",
+                },
+            },
+            "<0.2"
+        );
+        tl.from(
+            splitDescription.lines,
+            {
+                delay: 0.2,
+                duration: 1,
+                opacity: 0,
+                ease: "power2.out",
+                stagger: {
+                    amount: 0.6,
+                    from: "start",
+                },
+            },
+            "<0.2"
+        );
     }, []);
 
     return (
         <>
-            <div className="relative flex min-h-[90dvh] w-full items-center justify-center bg-white dark:bg-black">
-                <div
-                    className={cn(
-                        "absolute inset-0",
-                        "[background-size:20px_20px]",
-                        "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-                        "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
-                    )}
-                />
-                {/* Radial gradient for the container to give a faded look */}
-                <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
-                <div className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent text-center space-y-8">
-                    <h1 className="h1 text-charcoal tracking-tight leading-16 font-bold text-5xl capitalize">
-                        Level up your animations <br /> with the all-in
-                        membership
-                    </h1>
-                    <p className="max-w-2xl font-semibold text-charcoal/70">
+            <section className="container max-w-6xl mx-auto flex flex-col min-h-[80dvh] w-full justify-center">
+                <h1
+                    ref={titleRef}
+                    className="text-charcoal tracking-tight leading-16 font-bold text-7xl md:text-9xl"
+                >
+                    SteadFast
+                </h1>
+                <div className="flex flex-col md:flex-row md:justify-between mt-16 text-center py-8 gap-8">
+                    <ul className="text-left flex justify-between gap-8 xl:gap-12">
+                        <li className="stat-list">
+                            <h4 className="text-3xl font-semibold text-black">
+                                99+
+                            </h4>
+                            <h4 className="font-normal text-xs">
+                                Completed Projects
+                            </h4>
+                        </li>
+                        <li className="stat-list">
+                            <h4 className="text-3xl font-semibold text-black">
+                                2+
+                            </h4>
+                            <h4 className="font-normal text-xs">
+                                Years of Experience
+                            </h4>
+                        </li>
+                        <li className="stat-list">
+                            <h4 className="text-3xl font-semibold text-black">
+                                100%
+                            </h4>
+                            <h4 className="font-normal text-xs">
+                                Happy Clients
+                            </h4>
+                        </li>
+                    </ul>
+                    <p
+                        className="max-w-xl font-medium tracking-wide text-charcoal/70 text-xs"
+                        id="hero-description"
+                    >
                         Lorem ipsum dolor sit amet consectetur, adipisicing
                         elit. Sint molestias consequuntur unde modi voluptatem
-                        saepe accusantium ea quam maiores quidem!
+                        saepe accusantium Lorem ipsum dolor sit amet.
                     </p>
                 </div>
-            </div>
+            </section>
             <div className="relative h-dvh w-full">
                 <Image src={"/hero.webp"} alt="showcase" fill />
             </div>
-            <motion.div className="relative w-full my-24 px-12 flex justify-around items-center gap-4 text-2xl">
+            <div className="relative w-full my-24 px-12 flex justify-around items-center gap-4 text-2xl">
                 {/* skills */}
                 <SiTailwindcss size={48} className="text-sky-400" />
                 <FaReact size={48} className="text-sky-600" />
@@ -80,7 +127,7 @@ export default function Hero() {
                 <FaNodeJs size={48} className="text-green-700" />
                 <SiExpress size={48} className="text-green-600" />
                 <SiFastapi size={48} className="text-teal-800" />
-            </motion.div>
+            </div>
         </>
         // <div
         //     className=" container mx-auto flex justify-center flex-col items-center text-center invisible gap-y-8"
