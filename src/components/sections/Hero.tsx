@@ -14,8 +14,6 @@ import {
     SiTailwindcss,
 } from "react-icons/si";
 
-gsap.registerPlugin(SplitText);
-
 export default function Hero() {
     const titleRef = useRef<HTMLHeadingElement>(null);
 

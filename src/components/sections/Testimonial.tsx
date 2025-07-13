@@ -11,9 +11,6 @@ import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { testimonialData } from "@/data/testimonial";
-import { SplitText } from "gsap/all";
-
-gsap.registerPlugin(SplitText);
 
 const Testimonial = () => {
     const [currentTestimonial, setCurrentTestimonial] = useState(0);

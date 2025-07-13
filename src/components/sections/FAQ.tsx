@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
     Accordion,
@@ -6,10 +7,26 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import { faqs } from "@/data/faq";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const FAQ = () => {
+    useGSAP(() => {
+        gsap.to("#faq-section", {
+            scrollTrigger: {
+                trigger: "#faq-section",
+                start: "top bottom",
+                end: "bottom center",
+                scrub: 1,
+                // markers: true,
+            },
+            y: -350,
+            // duration: 0.5,
+        });
+    }, []);
+
     return (
-        <section className="min-h-dvh px-12 py-12 relative">
+        <section className="min-h-dvh px-12 py-12 relative" id="faq-section">
             <h1 className="text-3xl font-bold max-w-3xl mx-auto mb-4">FAQ</h1>
             <p className="text-base font-medium italic max-w-3xl mx-auto mb-4">
                 Some common questions we get

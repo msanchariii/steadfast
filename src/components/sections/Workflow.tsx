@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
 const cards = [
     {
         id: "01",
@@ -43,7 +42,7 @@ const Workflow = () => {
                 end: "+=1000",
                 scrub: 1,
                 pin: true,
-                markers: true,
+                // markers: true,
             },
         });
 

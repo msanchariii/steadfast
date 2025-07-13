@@ -5,18 +5,20 @@ import Services from "@/components/sections/Services";
 import Showcase from "@/components/sections/Showcase";
 import Testimonial from "@/components/sections/Testimonial";
 import Workflow from "@/components/sections/Workflow";
+import { GsapProvider } from "@/context/GsapProvider";
 
 export default function Home() {
     return (
         <main className="xl:space-y-32 bg-zinc-100">
-            <Hero />
-            <Testimonial />
-            <Showcase />
-            <Services />
-            <Workflow />
-            <FAQ />
-            {/* <div className="h-dvh"></div> */}
-            <Footer />
+            <GsapProvider>
+                <Hero />
+                <Testimonial />
+                <Showcase />
+                <Services />
+                <Workflow />
+                <FAQ />
+                <Footer />
+            </GsapProvider>
         </main>
     );
 }
