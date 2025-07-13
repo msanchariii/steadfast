@@ -1,6 +1,6 @@
 "use client";
 // useContext
-import React, { createContext, useContext } from "react";
+import React, { createContext } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 

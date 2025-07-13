@@ -1,11 +1,9 @@
 "use client";
 import {
-    ArrowBigLeft,
-    ArrowDownLeft,
+
     ArrowLeft,
     ArrowRight,
-    ArrowRightCircle,
-    ArrowRightFromLine,
+
 } from "lucide-react";
 import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
@@ -88,9 +86,9 @@ const Testimonial = () => {
                     className="text-2xl italic md:text-3xl"
                     id="testimonial-text"
                 >
-                    <span>"</span>
+                    <span>&quot;</span>
                     {testimonial}
-                    <span>"</span>
+                    <span>&quot;</span>
                 </p>
                 <div style={{ marginTop: "1rem", fontWeight: "bold" }}>
                     {name}
@@ -109,7 +107,7 @@ const Testimonial = () => {
                 </button>
                 <button
                     onClick={handleNext}
-                    // onClick={(e) => playPressAnimation(e.currentTarget)}
+                // onClick={(e) => playPressAnimation(e.currentTarget)}
                 >
                     <ArrowRight
                         className="transform rounded-full bg-black p-1 text-white transition duration-200 ease-in-out hover:scale-110 hover:bg-gray-800"

@@ -1,4 +1,4 @@
-const websiteServices = [
+export const websiteServices = [
     {
         id: 1,
         title: "Discovery & Planning",

@@ -18,7 +18,7 @@ const Pricing = () => {
     const onMouseLeaveGetAQuote = () => {
         gsap.to('#get-quote', {
             y: 0,
-             ease: "ease.inOut",
+            ease: "ease.inOut",
             duration: 0.16,
         })
 

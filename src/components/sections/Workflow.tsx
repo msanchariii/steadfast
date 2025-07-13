@@ -1,7 +1,6 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
 
 const cards = [
@@ -103,38 +102,37 @@ type WorkflowCardProps = {
     ref?: React.Ref<HTMLDivElement>;
 };
 
-const WorkflowCard = React.forwardRef<HTMLDivElement, WorkflowCardProps>(
-    ({ id = "01", title = "Title", desc = "Desc" }, ref) => {
-        return (
-            <div
-                ref={ref}
-                className={`workflow-card relative container mx-auto grid grid-cols-3 grid-rows-2 p-8 ${
-                    id === "contact"
-                        ? "items-center justify-center bg-black"
-                        : "bg-white"
+const WorkflowCard = ({ id = "01", title = "Title", desc = "Desc", ref }: WorkflowCardProps) => {
+
+    return (
+        <div
+            ref={ref}
+            className={`workflow-card relative container mx-auto grid grid-cols-3 grid-rows-2 p-8 ${id === "contact"
+                ? "items-center justify-center bg-black"
+                : "bg-white"
                 } h-44 rounded-lg border border-zinc-100`}
-            >
-                {id === "contact" ? (
-                    <a
-                        href="/brooooo"
-                        className="col-span-full row-span-2 text-center text-3xl font-semibold text-white"
-                    >
+        >
+            {id === "contact" ? (
+                <a
+                    href="/brooooo"
+                    className="col-span-full row-span-2 text-center text-3xl font-semibold text-white"
+                >
+                    {title}
+                </a>
+            ) : (
+                <>
+                    <p className="text-2xl font-bold text-zinc-600">{id}</p>
+                    <h3 className="col-span-2 mb-4 w-full max-w-lg text-left text-2xl font-bold tracking-tight">
                         {title}
-                    </a>
-                ) : (
-                    <>
-                        <p className="text-2xl font-bold text-zinc-600">{id}</p>
-                        <h3 className="col-span-2 mb-4 w-full max-w-lg text-left text-2xl font-bold tracking-tight">
-                            {title}
-                        </h3>
-                        {/* <p className="text-transparent">This is workflow card</p> */}
-                        <p className="col-span-full mt-2 h-8 max-w-md text-xs font-medium text-zinc-600">
-                            {desc}
-                        </p>
-                    </>
-                )}
-            </div>
-        );
-    },
-);
+                    </h3>
+                    {/* <p className="text-transparent">This is workflow card</p> */}
+                    <p className="col-span-full mt-2 h-8 max-w-md text-xs font-medium text-zinc-600">
+                        {desc}
+                    </p>
+                </>
+            )}
+        </div>
+    );
+}
+
 export default Workflow;

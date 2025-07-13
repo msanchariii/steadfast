@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import React, { useRef } from "react";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Navlink = ({ label = "Home", href = "#" }) => {
