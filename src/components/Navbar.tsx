@@ -1,5 +1,6 @@
 import React from "react";
 import Navlink from "./navbar/Navlink";
+import Link from "next/link";
 
 const Navbar = () => {
     return (
