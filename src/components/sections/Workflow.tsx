@@ -72,8 +72,16 @@ const Workflow = () => {
                 className="flex flex-col xl:flex-row justify-between items-center relative container mx-auto my-4 py-10 px-12 rounded-lg"
                 id="workflow-section"
             >
-                <div className="basis-1/2">s</div>
-                <div className="basis-1/2 relative space-y-2 left-0 right-0">
+                <div className="basis-1/2 h-full p-2">
+                    <p className="w-4/5 text-4xl font-bold">
+                        No guesswork, just a{" "}
+                        <span className="text-charcoal/50">clear path</span>{" "}
+                        from
+                        <span className="text-charcoal/50"> ideas</span>→{" "}
+                        <span className="text-charcoal/50">results.</span>
+                    </p>
+                </div>
+                <div className="basis-1/2 relative space-y-2 left-0 right-0 p-2">
                     {cards.map((card, i: number) => (
                         <WorkflowCard
                             key={i}
@@ -101,16 +109,19 @@ const WorkflowCard = React.forwardRef<HTMLDivElement, WorkflowCardProps>(
         return (
             <div
                 ref={ref}
-                className={`workflow-card grid grid-cols-3 relative container mx-auto p-8 ${
+                className={`workflow-card grid grid-cols-3 grid-rows-2 relative container mx-auto p-8 ${
                     id === "contact"
                         ? "bg-black items-center justify-center"
                         : "bg-white"
                 } h-44 rounded-lg border border-zinc-100`}
             >
                 {id === "contact" ? (
-                    <p className="text-white text-3xl font-semibold col-span-full text-center">
+                    <a
+                        href="/brooooo"
+                        className="row-span-2 text-white text-3xl font-semibold col-span-full text-center"
+                    >
                         {title}
-                    </p>
+                    </a>
                 ) : (
                     <>
                         <p className="font-bold text-2xl text-zinc-600">{id}</p>
