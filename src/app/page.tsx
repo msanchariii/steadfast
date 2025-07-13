@@ -17,7 +17,6 @@ export default function Home() {
                 <Services />
                 <Workflow />
                 <FAQ />
-                <Footer />
             </GsapProvider>
         </main>
     );
