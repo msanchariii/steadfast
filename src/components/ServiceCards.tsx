@@ -38,8 +38,9 @@ const ContactCardInServiceSection = () => {
         <div
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            className="overflow-hidden relative flex flex-col text-2xl xl:flex-row justify-between bg-black items-center container mx-auto my-4 py-10 px-12 rounded-lg cursor-pointer"
+            className="overflow-hidden relative flex flex-col text-2xl xl:flex-row justify-between bg-black items-center container mx-auto my-4 py-10 px-12 rounded-lg cursor-pointer "
         >
+            <a className="absolute inset-0" href="/contact"></a>
             <h3
                 ref={titleRef}
                 className="font-medium max-w-md text-zinc-100"
