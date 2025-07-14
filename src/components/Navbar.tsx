@@ -42,17 +42,19 @@ const Navbar = () => {
 
     return (
         <header className="mx-auto my-4 flex h-16 max-w-6xl items-center justify-between">
-            <h1 className="">Navbar</h1>
+            <Link href={"/"} className="">
+                SteadFast Studio
+            </Link>
             {hasMounted && (
                 <nav
                     className={`text-charcoal font-bold ${
                         isXLScreen
                             ? "flex gap-x-8 xl:flex xl:flex-row xl:items-center xl:gap-x-8"
-                            : `absolute top-16 right-0 left-0 z-20 mx-auto max-w-6xl flex-col items-end text-2xl ${
+                            : `absolute top-24 right-0 left-0 z-20 mx-auto max-w-6xl flex-col items-end text-2xl ${
                                   isOpen
                                       ? "flex min-h-[50dvh] justify-around"
                                       : "hidden"
-                              } bg-white p-8`
+                              } rounded-b-3xl bg-white p-8 text-black`
                     }`}
                 >
                     <Navlink label="Our Works" href="/works" />
