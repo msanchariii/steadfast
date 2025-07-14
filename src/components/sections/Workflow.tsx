@@ -67,7 +67,7 @@ const Workflow = () => {
                 Not just services - we deliver growth, clarity, and real impact.
             </h1>
             <div
-                className="relative container mx-auto my-4 flex flex-col items-center justify-between rounded-lg px-12 py-10 xl:flex-row"
+                className="relative container mx-auto my-4 flex flex-col items-center justify-between rounded-lg py-10 xl:flex-row"
                 id="workflow-section"
             >
                 <div className="h-full basis-1/2 p-2">
@@ -102,15 +102,20 @@ type WorkflowCardProps = {
     ref?: React.Ref<HTMLDivElement>;
 };
 
-const WorkflowCard = ({ id = "01", title = "Title", desc = "Desc", ref }: WorkflowCardProps) => {
-
+const WorkflowCard = ({
+    id = "01",
+    title = "Title",
+    desc = "Desc",
+    ref,
+}: WorkflowCardProps) => {
     return (
         <div
             ref={ref}
-            className={`workflow-card relative container mx-auto grid grid-cols-3 grid-rows-2 p-8 ${id === "contact"
-                ? "items-center justify-center bg-black"
-                : "bg-white"
-                } h-44 rounded-lg border border-zinc-100`}
+            className={`workflow-card relative container mx-auto grid grid-cols-3 grid-rows-2 p-8 ${
+                id === "contact"
+                    ? "items-center justify-center bg-black"
+                    : "bg-white"
+            } h-44 rounded-lg border border-zinc-100`}
         >
             {id === "contact" ? (
                 <a
@@ -133,6 +138,6 @@ const WorkflowCard = ({ id = "01", title = "Title", desc = "Desc", ref }: Workfl
             )}
         </div>
     );
-}
+};
 
 export default Workflow;
