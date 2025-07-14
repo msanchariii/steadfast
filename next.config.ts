@@ -2,8 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
     /* config options here */
-    // output: "export",
-    // basePath: "/steadfast",
+    output: "export",
+    basePath: "/studio",
 };
 
 export default nextConfig;
