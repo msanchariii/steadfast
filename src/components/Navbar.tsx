@@ -43,8 +43,13 @@ const Navbar = () => {
 
     return (
         <header className="mx-auto my-4 flex h-16 max-w-6xl items-center justify-between">
-            <Link href={"/"} className="">
-                SteadFast Studio
+            <Link href={"/"} className="flex items-center gap-x-2">
+                <img
+                    src={"/assets/global/logo-light.svg"}
+                    width={48}
+                    height={48}
+                />
+                <img src="/assets/global/logo.svg" width={150} />
             </Link>
             {hasMounted && (
                 <nav
