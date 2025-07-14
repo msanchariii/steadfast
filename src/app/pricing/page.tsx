@@ -1,10 +1,10 @@
-import Pricing from '@/components/sections/Pricing'
-import React from 'react'
+import Pricing from "@/components/sections/Pricing";
+import React from "react";
 
 const PricingPage = () => {
     return (
-        <div className="container mx-auto rounded-4xl bg-zinc-100 px-6 py-8 md:px-12 lg:py-16 xl:py-20">
-            <div className="mx-auto flex flex-col justify-between gap-8 md:flex-row md:items-end mb-16 xl:mb-24">
+        <>
+            <div className="mx-auto mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end xl:mb-24">
                 <h2 className="text-5xl font-bold sm:text-7xl md:text-9xl">
                     Pricing
                 </h2>
@@ -15,8 +15,8 @@ const PricingPage = () => {
                 </p>
             </div>
             <Pricing />
-        </div>
-    )
-}
+        </>
+    );
+};
 
-export default PricingPage
+export default PricingPage;

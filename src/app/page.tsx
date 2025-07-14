@@ -8,15 +8,13 @@ import { GsapProvider } from "@/context/GsapProvider";
 
 export default function Home() {
     return (
-        <main className="rounded-3xl bg-zinc-100 xl:space-y-32">
-            <GsapProvider>
-                <Hero />
-                <Testimonial />
-                <Showcase />
-                <Services />
-                <Workflow />
-                <FAQ />
-            </GsapProvider>
-        </main>
+        <GsapProvider>
+            <Hero />
+            <Testimonial />
+            <Showcase />
+            <Services />
+            <Workflow />
+            <FAQ />
+        </GsapProvider>
     );
 }
