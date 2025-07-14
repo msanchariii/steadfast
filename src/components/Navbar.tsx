@@ -43,11 +43,11 @@ const Navbar = () => {
 
     return (
         <header className="mx-auto my-4 flex h-16 max-w-6xl items-center justify-between">
-            <Link href={"/"} className="flex items-center gap-x-2">
+            <Link href={"/"} className="flex items-center gap-x-4">
                 <img
                     src={"/assets/global/logo-light.svg"}
-                    width={48}
-                    height={48}
+                    width={40}
+                    height={40}
                 />
                 <img src="/assets/global/logo.svg" width={150} />
             </Link>
@@ -68,7 +68,11 @@ const Navbar = () => {
                     <Navlink label="About" href="/about" />
                 </nav>
             )}
-            <AnimatedButton label1="Contact Us" label2="Get A Quote" />
+            <AnimatedButton
+                label1="Contact Us"
+                label2="Get A Quote"
+                className="hidden xl:flex"
+            />
             <button className="block xl:hidden" onClick={handleToggle}>
                 <span
                     ref={menuRef}

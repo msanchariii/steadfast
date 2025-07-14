@@ -5,9 +5,11 @@ import React from "react";
 const AnimatedButton = ({
     label1 = "Label 1",
     label2 = "Label 2",
+    className = "",
 }: {
     label1: string;
     label2: string;
+    className?: string;
 }) => {
     const onMouseEnterGetAQuote = () => {
         gsap.to("#get-quote", {
@@ -27,7 +29,7 @@ const AnimatedButton = ({
         <button
             onMouseEnter={onMouseEnterGetAQuote}
             onMouseLeave={onMouseLeaveGetAQuote}
-            className="flex h-9 items-center justify-center gap-2 overflow-y-hidden rounded-md bg-black px-3 py-2 text-center text-white hover:bg-zinc-800 md:order-1"
+            className={`flex h-9 items-center justify-center gap-2 overflow-y-hidden rounded-md bg-black px-3 py-2 text-center text-white hover:bg-zinc-800 md:order-1 ${className}`}
         >
             <div
                 id="get-quote"

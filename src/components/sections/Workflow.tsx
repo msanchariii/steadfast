@@ -73,10 +73,10 @@ const Workflow = () => {
                 <div className="h-full basis-1/2 p-2">
                     <p className="w-4/5 text-4xl font-bold">
                         No guesswork, just a{" "}
-                        <span className="text-charcoal/50">clear path</span>{" "}
+                        <span className="text-lavender-dark">clear path</span>{" "}
                         from
-                        <span className="text-charcoal/50"> ideas</span>→{" "}
-                        <span className="text-charcoal/50">results.</span>
+                        <span className="text-lavender-dark"> ideas</span>→{" "}
+                        <span className="text-lavender-dark">results.</span>
                     </p>
                 </div>
                 <div className="relative right-0 left-0 basis-1/2 space-y-2 p-2">

@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import Image from "next/image";
 import { useRef } from "react";
+import { DiMongodb } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa6";
 
@@ -11,6 +12,9 @@ import {
     SiExpress,
     SiFastapi,
     SiNextdotjs,
+    SiPostgresql,
+    SiSanity,
+    SiStrapi,
     SiTailwindcss,
 } from "react-icons/si";
 
@@ -68,13 +72,19 @@ export default function Hero() {
 
     return (
         <>
-            <section className="container mx-auto flex min-h-[80dvh] w-full max-w-6xl flex-col justify-center">
-                <h1
+            <section className="container mx-auto flex min-h-[100dvh] w-full max-w-6xl flex-col justify-center">
+                {/* <h1
                     ref={titleRef}
                     className="text-charcoal text-7xl leading-16 font-bold tracking-tight md:text-9xl"
                 >
                     SteadFast
-                </h1>
+                </h1> */}
+                <Image
+                    src={"/assets/global/logo-with-tagline.svg"}
+                    height={300}
+                    width={700}
+                    alt="SteadFast Logo"
+                />
                 <div className="mt-16 flex flex-col gap-8 py-8 text-center md:flex-row md:justify-between">
                     <ul className="flex justify-between gap-8 text-left xl:gap-12">
                         <li className="stat-list">
@@ -111,19 +121,23 @@ export default function Hero() {
                         saepe accusantium Lorem ipsum dolor sit amet.
                     </p>
                 </div>
+                <div className="mt-24 hidden w-full px-4 text-zinc-700 lg:flex lg:items-center lg:justify-around lg:gap-4 lg:opacity-90">
+                    {/* skills */}
+                    <SiTailwindcss size={48} className="" />
+                    <FaReact size={48} className="" />
+                    <SiNextdotjs size={48} />
+                    <FaNodeJs size={48} className="" />
+                    <SiExpress size={48} className="" />
+                    <SiFastapi size={48} className="" />
+                    <SiStrapi size={48} className="" />
+                    <SiSanity size={48} className="" />
+                    <DiMongodb size={48} className="" />
+                    <SiPostgresql size={48} className="" />
+                </div>
             </section>
-            <div className="relative h-dvh w-full">
+            {/* <div className="relative h-dvh w-full">
                 <Image src={"/hero.webp"} alt="showcase" fill />
-            </div>
-            <div className="relative my-24 flex w-full items-center justify-around gap-4 px-12 text-2xl">
-                {/* skills */}
-                <SiTailwindcss size={48} className="text-sky-400" />
-                <FaReact size={48} className="text-sky-600" />
-                <SiNextdotjs size={48} />
-                <FaNodeJs size={48} className="text-green-700" />
-                <SiExpress size={48} className="text-green-600" />
-                <SiFastapi size={48} className="text-teal-800" />
-            </div>
+            </div> */}
         </>
         // <div
         //     className=" container mx-auto flex justify-center flex-col items-center text-center invisible gap-y-8"
