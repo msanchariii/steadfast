@@ -26,11 +26,11 @@ const Footer = () => (
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="font-medium lg:order-2">
                 <p className="text-zinc-400">Email</p>
-                <p className="">sancharim2233@gmail.com</p>
+                <p className="">steadfastwebstudios@gmail.com</p>
             </div>
             <div className="font-medium lg:order-3">
-                <p className="text-zinc-400">Email</p>
-                <p>sancharim2233@gmail.com</p>
+                <p className="text-zinc-400">Address</p>
+                <p>Kolkata India</p>
             </div>
             <div className="flex items-end justify-between lg:order-1 lg:gap-6">
                 <div>

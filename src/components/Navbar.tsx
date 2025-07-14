@@ -6,6 +6,7 @@ import { AlignJustify, X } from "lucide-react";
 import { useMediaQuery } from "react-responsive";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import AnimatedButton from "./AnimatedButton";
 
 const Navbar = () => {
     const [hasMounted, setHasMounted] = useState(false);
@@ -62,12 +63,7 @@ const Navbar = () => {
                     <Navlink label="About" href="/about" />
                 </nav>
             )}
-            <Link
-                href={"/contact"}
-                className="hidden rounded-lg bg-black px-4 py-2 text-white transition-colors duration-300 hover:bg-gray-800 xl:block"
-            >
-                Chat with Us
-            </Link>
+            <AnimatedButton label1="Contact Us" label2="Get A Quote" />
             <button className="block xl:hidden" onClick={handleToggle}>
                 <span
                     ref={menuRef}
