@@ -20,13 +20,16 @@ const FAQ = () => {
                 scrub: 1,
                 // markers: true,
             },
-            y: -350,
+            y: -50,
             // duration: 0.5,
         });
     }, []);
 
     return (
-        <section className="relative min-h-dvh px-12 py-12" id="faq-section">
+        <section
+            className="relative mt-32 min-h-dvh px-12 py-12"
+            id="faq-section"
+        >
             <h2 className="mb-6 font-semibold">[FAQ]</h2>
             <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
                 Not just services - we deliver growth, clarity, and real impact.

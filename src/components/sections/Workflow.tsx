@@ -41,7 +41,6 @@ const Workflow = () => {
                 end: "+=1000",
                 scrub: 1,
                 pin: true,
-                // markers: true,
             },
         });
 
@@ -60,17 +59,20 @@ const Workflow = () => {
     }, []);
 
     return (
-        <section className="relative container mx-auto my-12 min-h-dvh px-12">
+        <section className="relative container mx-auto mt-12 min-h-dvh px-12">
             {/* <h2 className="sr-only">Workflow</h2> */}
             <h2 className="mb-6 font-semibold">[Workflow]</h2>
             <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
                 Not just services - we deliver growth, clarity, and real impact.
             </h1>
             <div
-                className="relative container mx-auto my-4 flex flex-col items-center justify-between rounded-lg py-10 xl:flex-row"
+                className={
+                    "relative container mx-auto my-4 flex flex-col items-start justify-between rounded-lg pt-10 xl:flex-row" +
+                    ""
+                }
                 id="workflow-section"
             >
-                <div className="h-full basis-1/2 p-2">
+                <div className="h-full max-h-dvh basis-1/2 p-2">
                     <p className="w-4/5 text-4xl font-bold">
                         No guesswork, just a{" "}
                         <span className="text-lavender-dark">clear path</span>{" "}
@@ -79,7 +81,10 @@ const Workflow = () => {
                         <span className="text-lavender-dark">results.</span>
                     </p>
                 </div>
-                <div className="relative right-0 left-0 basis-1/2 space-y-2 p-2">
+                <div
+                    className="relative right-0 left-0 h-dvh basis-1/2 space-y-2 p-2"
+                    id="workflow-cards"
+                >
                     {cards.map((card, i: number) => (
                         <WorkflowCard
                             key={i}

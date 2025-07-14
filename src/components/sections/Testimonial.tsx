@@ -1,121 +1,55 @@
 "use client";
-import {
-
-    ArrowLeft,
-    ArrowRight,
-
-} from "lucide-react";
-import React, { useRef, useState } from "react";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { testimonialData } from "@/data/testimonial";
+import { testimonialData, TestimonialData } from "@/data/testimonial";
+import React from "react";
 
 const Testimonial = () => {
-    const [currentTestimonial, setCurrentTestimonial] = useState(0);
-    const contentRef = useRef<HTMLDivElement>(null);
-
-    const handlePrev = (e: React.MouseEvent<HTMLButtonElement>) => {
-        setCurrentTestimonial((prev) =>
-            prev === 0 ? testimonialData.length - 1 : prev - 1,
-        );
-        playPressAnimation(e.currentTarget);
-    };
-
-    const handleNext = (e: React.MouseEvent<HTMLButtonElement>) => {
-        setCurrentTestimonial((prev) =>
-            prev === testimonialData.length - 1 ? 0 : prev + 1,
-        );
-        playPressAnimation(e.currentTarget);
-    };
-
-    useGSAP(() => {
-        if (contentRef.current) {
-            gsap.fromTo(
-                contentRef.current,
-                { autoAlpha: 0, x: 100 },
-                { autoAlpha: 1, x: 0, duration: 0.6, ease: "power2.out" },
-            );
-        }
-    }, [currentTestimonial]);
-
-    useGSAP(() => {
-        // button press animations
-        gsap.fromTo(
-            "button",
-            {
-                scale: 0.95,
-                opacity: 0,
-                y: 20,
-            },
-            {
-                scale: 1,
-                opacity: 1,
-                y: 0,
-                duration: 0.6,
-                ease: "power2.out",
-                stagger: 0.1,
-            },
-        );
-    });
-
-    const playPressAnimation = (target: HTMLButtonElement) => {
-        const tl = gsap.timeline();
-
-        tl.to(target, {
-            scale: 0.8,
-            duration: 0.2,
-            ease: "power1.inOut",
-        }).to(target, {
-            scale: 1,
-            duration: 0.3,
-            ease: "elastic.out(1, 0.4)",
-        });
-    };
-
-    const { name, position, company, testimonial } =
-        testimonialData[currentTestimonial];
-
     return (
-        <section className="relative container mx-auto my-12 flex h-dvh flex-col items-center justify-center gap-6 rounded-lg bg-gradient-to-br from-sky-50 via-white to-purple-50 p-6 text-center shadow-md">
-            <h2 className="sr-only">Testimonials</h2>
-            <div className="mx-auto size-16 rounded-full bg-red-200"></div>
-
-            {/* Animated content */}
-            <div className="mx-auto max-w-3/5" ref={contentRef}>
-                <p
-                    className="text-2xl italic md:text-3xl"
-                    id="testimonial-text"
-                >
-                    <span>&quot;</span>
-                    {testimonial}
-                    <span>&quot;</span>
-                </p>
-                <div style={{ marginTop: "1rem", fontWeight: "bold" }}>
-                    {name}
-                </div>
-                <div style={{ color: "#555" }}>
-                    {position} @ {company}
-                </div>
-            </div>
-
-            <div className="absolute bottom-12 left-1/2 flex -translate-x-1/2 transform items-center gap-x-6">
-                <button onClick={handlePrev}>
-                    <ArrowLeft
-                        className="transform rounded-full bg-black p-1 text-white transition duration-200 ease-in-out hover:scale-110 hover:bg-gray-800"
-                        size={32}
-                    />
-                </button>
-                <button
-                    onClick={handleNext}
-                // onClick={(e) => playPressAnimation(e.currentTarget)}
-                >
-                    <ArrowRight
-                        className="transform rounded-full bg-black p-1 text-white transition duration-200 ease-in-out hover:scale-110 hover:bg-gray-800"
-                        size={32}
-                    />
-                </button>
+        <section className="container mt-48">
+            <h2 className="mb-6 font-semibold">[Testimonials]</h2>
+            <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
+                Not just services - we deliver growth, clarity, and real impact.
+            </h1>
+            <div className="mt-24 grid grid-cols-1 place-items-center md:grid-cols-2 lg:gap-16 xl:mt-32 xl:px-12">
+                <TestimonialCard
+                    testimonial={testimonialData[0]}
+                    className="self-end"
+                />
+                <TestimonialCard testimonial={testimonialData[1]} />
+                <TestimonialCard
+                    testimonial={testimonialData[2]}
+                    className="self-start"
+                />
+                <TestimonialCard testimonial={testimonialData[3]} />
             </div>
         </section>
+    );
+};
+
+const TestimonialCard = ({
+    testimonial,
+    className = "",
+}: {
+    testimonial: TestimonialData;
+    className?: string;
+}) => {
+    return (
+        <div
+            className={`bg-lavender/20 before:border-b-lavender-dark relative h-fit w-full rounded-tr-2xl rounded-b-2xl px-6 py-6 text-black before:absolute before:top-[-24px] before:left-0 before:h-0 before:w-0 before:border-r-[20px] before:border-b-[20px] before:border-r-transparent before:content-[''] ${className}`}
+        >
+            <div className="flex h-full w-full flex-col gap-4">
+                <div className="text-lavender-dark font-semibold">
+                    {testimonial.name + ", " + testimonial.position}
+                </div>
+                <p className="font-bold italic">{testimonial.company}</p>
+                <p className="text-sm italic">{testimonial.testimonial}</p>
+                {testimonial.via && (
+                    <p className="text-lavender-dark/90 text-xs font-medium">
+                        via{" "}
+                        <span className="font-semibold">{testimonial.via}</span>
+                    </p>
+                )}
+            </div>
+        </div>
     );
 };
 
