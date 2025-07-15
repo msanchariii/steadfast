@@ -1,3 +1,42 @@
+export const homePageServices = [
+    {
+        id: 1,
+        title: "Custom Website Design",
+        description:
+            "Modern, mobile-friendly designs in Figma — tailored to your brand and built to impress.",
+    },
+    {
+        id: 2,
+        title: "Figma to Website",
+        description:
+            "Got a Figma design? We'll turn it into a fast, responsive website using React or Next.js.",
+    },
+    {
+        id: 3,
+        title: "Personal & Portfolio Sites",
+        description:
+            "Clean, standout sites to showcase your work, skills, or story — made for creatives and pros.",
+    },
+    {
+        id: 4,
+        title: "AI-Powered Integrations",
+        description:
+            "Enhance your product with AI chatbots, smart forms, and content automation — using applied AI tools.",
+    },
+    {
+        id: 5,
+        title: "Landing Pages",
+        description:
+            "High-conversion one-pagers for product launches, campaigns, or quick promos — fast and SEO-friendly.",
+    },
+    {
+        id: 6,
+        title: "Site Maintenance & Support",
+        description:
+            "Bug fixes, content updates, and ongoing care to keep your site fresh and working smoothly.",
+    },
+];
+
 export const services = [
     {
         id: 1,
