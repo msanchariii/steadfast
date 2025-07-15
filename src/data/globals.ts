@@ -73,3 +73,37 @@ export const footerLinks = [
     { id: 4, label: "FAQ", href: "/#faq" },
     // { id: 5, label: "Contact", href: "/contact" },
 ];
+
+
+export const sectionDescriptions = [
+    {
+        id: 1,
+        section: "hero",
+        description:
+            "We build lightning-fast websites and scalable apps that bring your ideas to life. Small team, big results—custom-crafted solutions that work seamlessly across platforms and devices.",
+    },
+    {
+        id: 2,
+        section: "about",
+        description:
+            "We're a tight-knit team of four developers who believe in clean code, purposeful design, and building digital products that are as functional as they are beautiful.",
+    },
+    {
+        id: 3,
+        section: "ourWork",
+        description:
+            "From sleek landing pages to complex web platforms, we take pride in projects that solve problems, look great, and actually perform. Here’s a peek at what we’ve built.",
+    },
+    {
+        id: 4,
+        section: "pricing",
+        description:
+            "Transparent, project-based pricing designed for startups, small businesses, and bold ideas. No hidden fees—just clear packages that scale with your vision and budget.",
+    },
+    {
+        id: 5,
+        section: "contact",
+        description:
+            "Have a project in mind or just want to say hi? We’d love to chat. Drop us a message and let’s start building something awesome together.",
+    },
+];
