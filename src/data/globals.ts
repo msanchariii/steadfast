@@ -68,9 +68,8 @@ export const navbarLinks = [
 ];
 
 export const footerLinks = [
-    { id: 1, label: "Home", href: "/" },
-    { id: 2, label: "Workflow", href: "/workflow" },
-    { id: 3, label: "Testimonials", href: "/testimonials" },
-    { id: 4, label: "FAQ", href: "/faq" },
-    { id: 5, label: "Contact", href: "/contact" },
+    { id: 2, label: "Services", href: "/#services" },
+    { id: 3, label: "Our Team", href: "/#our-team" },
+    { id: 4, label: "FAQ", href: "/#faq" },
+    // { id: 5, label: "Contact", href: "/contact" },
 ];
