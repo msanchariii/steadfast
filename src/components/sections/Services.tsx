@@ -3,7 +3,7 @@ import ContactCardInServiceSection from "../ServiceCards";
 
 const Services = () => {
     return (
-        <section className="relative container mx-auto my-12 min-h-dvh px-0 lg:px-12">
+        <section className="relative container mx-auto my-12 min-h-dvh px-0">
             <h2 className="sr-only">Services</h2>
             <h2 className="mb-6 font-semibold">[Services]</h2>
             <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">

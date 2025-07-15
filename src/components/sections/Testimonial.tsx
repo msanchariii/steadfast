@@ -9,7 +9,7 @@ const Testimonial = () => {
             <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
                 Not just services - we deliver growth, clarity, and real impact.
             </h1>
-            <div className="mt-24 grid grid-cols-1 place-items-center md:grid-cols-2 lg:gap-16 xl:mt-32 xl:px-12">
+            <div className="mt-24 grid grid-cols-1 place-items-center gap-12 md:grid-cols-2 lg:gap-16 xl:mt-32 xl:px-12">
                 <TestimonialCard
                     testimonial={testimonialData[0]}
                     className="self-end"
