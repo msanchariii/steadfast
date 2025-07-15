@@ -1,7 +1,8 @@
-import { WorkCard } from "@/app/works/page";
+// import { WorkCard } from "@/app/works/page";
 import { FeaturedProjectsHeadline } from "@/data/SectionHeadlines";
 import { workData } from "@/data/works";
 import React from "react";
+import WorkCard from "../WorkCard";
 
 const Showcase = () => {
     return (
