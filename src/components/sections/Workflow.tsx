@@ -2,6 +2,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const cards = [
     {
@@ -32,8 +33,11 @@ const cards = [
 ];
 const Workflow = () => {
     const cardsRef = useRef<Array<HTMLDivElement | null>>([]);
+    const isXLScreen = useMediaQuery({ query: "(min-width: 80rem)" });
 
     useGSAP(() => {
+        if (!isXLScreen) return;
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: "#workflow-section",
@@ -59,7 +63,7 @@ const Workflow = () => {
     }, []);
 
     return (
-        <section className="relative container mx-auto mt-12 min-h-dvh px-12">
+        <section className="relative container mx-auto mt-12 min-h-dvh">
             {/* <h2 className="sr-only">Workflow</h2> */}
             <h2 className="mb-6 font-semibold">[Workflow]</h2>
             <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
@@ -67,12 +71,12 @@ const Workflow = () => {
             </h1>
             <div
                 className={
-                    "relative container mx-auto my-4 flex flex-col items-start justify-between rounded-lg pt-10 xl:flex-row" +
+                    "relative container mx-auto mt-16 flex flex-col items-start justify-between rounded-lg pt-10 xl:flex-row" +
                     ""
                 }
                 id="workflow-section"
             >
-                <div className="h-full max-h-dvh basis-1/2 p-2">
+                <div className="max-h-dvh basis-1/2 p-2">
                     <p className="w-4/5 text-4xl font-bold">
                         No guesswork, just a{" "}
                         <span className="text-lavender-dark">clear path</span>{" "}
@@ -82,7 +86,7 @@ const Workflow = () => {
                     </p>
                 </div>
                 <div
-                    className="relative right-0 left-0 h-dvh basis-1/2 space-y-2 p-2"
+                    className="mt-12 space-y-2 p-2 xl:relative xl:right-0 xl:left-0 xl:mt-0 xl:h-dvh xl:basis-1/2"
                     id="workflow-cards"
                 >
                     {cards.map((card, i: number) => (
@@ -116,7 +120,7 @@ const WorkflowCard = ({
     return (
         <div
             ref={ref}
-            className={`workflow-card relative container mx-auto grid grid-cols-3 grid-rows-2 p-8 ${
+            className={`workflow-card relative container mx-auto grid w-full grid-cols-2 grid-rows-2 p-8 xl:grid-cols-3 ${
                 id === "contact"
                     ? "items-center justify-center bg-black"
                     : "bg-white"
@@ -124,7 +128,7 @@ const WorkflowCard = ({
         >
             {id === "contact" ? (
                 <a
-                    href="/brooooo"
+                    href="/contact"
                     className="col-span-full row-span-2 text-center text-3xl font-semibold text-white"
                 >
                     {title}
@@ -132,11 +136,11 @@ const WorkflowCard = ({
             ) : (
                 <>
                     <p className="text-2xl font-bold text-zinc-600">{id}</p>
-                    <h3 className="col-span-2 mb-4 w-full max-w-lg text-left text-2xl font-bold tracking-tight">
+                    <h3 className="col-span-2 mb-4 w-full text-left text-xl font-bold tracking-tight xl:max-w-lg xl:text-2xl">
                         {title}
                     </h3>
                     {/* <p className="text-transparent">This is workflow card</p> */}
-                    <p className="col-span-full mt-2 h-8 max-w-md text-xs font-medium text-zinc-600">
+                    <p className="col-span-full mt-2 h-8 text-xs font-medium text-zinc-600 xl:max-w-md">
                         {desc}
                     </p>
                 </>
