@@ -40,31 +40,29 @@ export const socialLinks = [
         id: 1,
         platform: "LinkedIn",
         username: "youragency",
-        link: "https://www.linkedin.com/company/youragency",
+        link: "https://www.linkedin.com/company/steadfast-studio/",
     },
     {
         id: 2,
-        platform: "GitHub",
-        username: "youragency",
-        link: "https://github.com/youragency",
+        platform: "X",
+        username: "@steadfastss",
+        link: "https://x.com/steadfastss",
     },
     {
         id: 3,
-        platform: "Twitter",
-        username: "@youragency",
-        link: "https://twitter.com/youragency",
-    },
-    {
-        id: 4,
-        platform: "Email",
-        link: "mailto:hello@youragency.com",
-    },
-    {
-        id: 5,
         platform: "Portfolio",
-        link: "https://youragency.com",
+        link: "https://steadfastweb.studio/",
     },
 ];
+
+export const email = [
+    {
+        id: 1,
+        platform: "Email",
+        link: "mailto:steadfastwebstudios@gmail.com",
+    },
+];
+
 
 export const navbarLinks = [
     { id: 1, label: "Home", href: "/" },
