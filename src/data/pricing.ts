@@ -42,65 +42,79 @@ export const unitPricing = {
     },
     pages: {
         base: 3,
+        // Most freelancers charge ~$100–200/page for static sites (or $1000–3000 total for basic sites)
         pricePerPage: {
-            INR: 1500,
-            USD: 24,
+            INR: 1000, // ~$36
+            USD: 15,
         },
     },
     uiUxDesign: {
-        INR: 1000,
-        USD: 36,
+        // UI/UX design alone often goes $30–100/hr; for a project ~= 5–10 hrs/page
+        INR: 2500, // ~$72
+        USD: 40,
     },
     contactForm: {
-        INR: 1000,
-        USD: 12,
+        // Setup with validation typically $100–200 fixed
+        INR: 300, // ~$10
+        USD: 5,
     },
     animations: {
-        INR: 2000,
-        USD: 24,
+        // Basic animations or micro-interactions ~$200–500
+        INR: 2000, // ~$48
+        USD: 25,
     },
     seoSetup: {
-        INR: 500,
-        USD: 18,
+        // Basic SEO including metadata, sitemap ~$100–300
+        INR: 300, // ~$18
+        USD: 5,
     },
     deployment: {
-        INR: 1000,
-        USD: 12,
+        // Hosting, SSL, deployment ~2–4 hrs
+        INR: 3000, // ~$36
+        USD: 40,
+        note: "We will transfer the ownership to the client after completing the project .",
     },
     domainSetup: {
-        INR: 500,
-        USD: 6,
+        INR: 0, // ~$10
+        USD: 0,
+        note: "We will only charge the price for buying the domain.",
     },
     cmsIntegration: {
-        INR: 2500,
-        USD: 30,
+        // Handled in 5–10 hrs depending CMS
+        INR: 10000, // ~$120
+        USD: 150,
     },
     backend: {
         basicAPI: {
-            INR: 4000,
-            USD: 48,
+            // CRUD API endpoints ~$200–500
+            INR: 8000, // ~$96
+            USD: 120,
         },
         authSystem: {
-            INR: 3000,
-            USD: 36,
+            INR: 6000, // ~$72
+            USD: 100,
         },
         dbIntegration: {
-            INR: 3000,
-            USD: 36,
+            INR: 6000, // ~$72
+            USD: 100,
         },
         fullStack: {
-            INR: 9000,
-            USD: 108,
+            // End‑to‑end backend + DB + API
+            INR: 24000, // ~$288
+            USD: 360,
         },
     },
     ongoingMaintenance: {
+        // Freelancers often charge $200–500/mo for updates/support
         monthly: {
-            INR: 2000,
-            USD: 24,
+            INR: 16000, // ~$192
+            USD: 240,
         },
         yearlyDiscount: {
-            INR: 20000,
-            USD: 240,
+            // ~2 months free if paid annually
+            INR: 160000, // ~$1,920
+            USD: 2400,
         },
     },
 };
+
