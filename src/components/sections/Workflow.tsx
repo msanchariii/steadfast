@@ -71,12 +71,11 @@ const Workflow = () => {
             </h1>
             <div
                 className={
-                    "relative container mx-auto mt-16 flex flex-col items-start justify-between rounded-lg pt-10 xl:flex-row" +
-                    ""
+                    "relative container mx-auto mt-16 flex flex-col items-start justify-between rounded-lg pt-10 xl:flex-row"
                 }
                 id="workflow-section"
             >
-                <div className="max-h-dvh basis-1/2 p-2">
+                <div className="max-h-dvh p-2 xl:basis-1/2">
                     <p className="w-4/5 text-4xl font-bold">
                         No guesswork, just a{" "}
                         <span className="text-lavender-dark">clear path</span>{" "}
@@ -86,7 +85,7 @@ const Workflow = () => {
                     </p>
                 </div>
                 <div
-                    className="mt-12 space-y-2 p-2 xl:relative xl:right-0 xl:left-0 xl:mt-0 xl:h-dvh xl:basis-1/2"
+                    className="mt-12 w-full space-y-2 p-2 xl:relative xl:right-0 xl:left-0 xl:mt-0 xl:h-dvh xl:basis-1/2"
                     id="workflow-cards"
                 >
                     {cards.map((card, i: number) => (
