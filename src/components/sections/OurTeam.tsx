@@ -29,7 +29,7 @@ const OurTeam = () => {
                             </p>
                         </div>
                         <p className="mt-6 text-xl font-medium text-zinc-600 italic">
-                            {memberData[0].bio}
+                            {memberData[0].quote}
                         </p>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ const TeamMemberCard = ({
                 </div>
             </div>
             <p className="mt-12 text-lg text-zinc-500 italic">
-                {'"' + member.bio + '"'}
+                {'"' + member.quote + '"'}
             </p>
         </div>
     );
