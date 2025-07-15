@@ -1,4 +1,5 @@
 "use client";
+import { WorkflowHeadline } from "@/data/SectionHeadlines";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
@@ -64,11 +65,7 @@ const Workflow = () => {
 
     return (
         <section className="relative min-h-dvh">
-            {/* <h2 className="sr-only">Workflow</h2> */}
-            <h2 className="mb-6 font-semibold">[Workflow]</h2>
-            <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
-                Not just services - we deliver growth, clarity, and real impact.
-            </h1>
+            <WorkflowHeadline />
             <div
                 className={
                     "relative container mx-auto mt-16 flex flex-col items-start justify-between rounded-lg pt-10 xl:flex-row"

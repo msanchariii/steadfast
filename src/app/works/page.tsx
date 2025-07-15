@@ -1,18 +1,17 @@
+import { sectionDescriptions } from "@/data/globals";
 import { Work, workData } from "@/data/works";
 import Link from "next/link";
 import React from "react";
 
 const WorkPage = () => {
     return (
-        <>
+        <section>
             <div className="mx-auto flex flex-col justify-between gap-8 md:flex-row md:items-end">
                 <h2 className="text-5xl font-bold sm:text-7xl md:text-9xl">
                     Work
                 </h2>
                 <p className="max-w-md text-xs md:py-2">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Quas consequuntur dicta deleniti nulla. Veritatis eveniet
-                    quos qui dolorem ipsum itaque officiis soluta?
+                    {sectionDescriptions.ourWork}
                 </p>
             </div>
             <div className="mt-16 space-y-16 md:space-y-12 lg:mt-24">
@@ -20,7 +19,7 @@ const WorkPage = () => {
                     <WorkCard key={work.id} work={work} />
                 ))}
             </div>
-        </>
+        </section>
     );
 };
 

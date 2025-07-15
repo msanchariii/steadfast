@@ -73,12 +73,13 @@ export default function Hero() {
 
     return (
         <>
-            <section className="flex flex-col justify-center">
+            <section className="flex min-h-dvh flex-col justify-center">
                 <Image
                     src={"/assets/global/logo-with-tagline.svg"}
                     height={300}
                     width={700}
                     alt="SteadFast Logo"
+                    className="mt-16"
                 />
                 <div className="mt-16 flex flex-col gap-8 py-8 text-center md:flex-row md:justify-between">
                     <ul className="flex justify-between gap-8 text-left xl:gap-12">
@@ -100,14 +101,10 @@ export default function Hero() {
                         </li>
                     </ul>
                     <p
-                        className="text-charcoal/70 max-w-xl text-xs font-medium tracking-wide"
+                        className="text-charcoal/70 max-w-xl text-left text-xs font-medium tracking-wide md:text-center"
                         id="hero-description"
                     >
-                        {
-                            sectionDescriptions.find(
-                                (desc) => desc.section === "hero",
-                            )?.description
-                        }
+                        {sectionDescriptions.hero}
                     </p>
                 </div>
                 <div className="mt-24 hidden w-full px-4 text-zinc-700 lg:flex lg:items-center lg:justify-around lg:gap-4 lg:opacity-90">
@@ -124,36 +121,6 @@ export default function Hero() {
                     <SiPostgresql size={48} className="" />
                 </div>
             </section>
-            {/* <div className="relative h-dvh w-full">
-                <Image src={"/hero.webp"} alt="showcase" fill />
-            </div> */}
         </>
-        // <div
-        //     className=" container mx-auto flex justify-center flex-col items-center text-center invisible gap-y-8"
-        //     ref={containerRef}
-        // >
-        //     <div className="">
-        //         <div
-        //             className={cn(
-        //                 "absolute inset-0",
-        //                 "[background-size:20px_20px]",
-        //                 "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-        //                 "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
-        //             )}
-        //         />
-        //         <div className="pointer-events-none absolute inset-0  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-        //         <div className="">
-        //             <h1 className="h1 text-charcoal tracking-tight leading-16 font-bold text-5xl capitalize">
-        //                 Level up your animations <br /> with the all-in
-        //                 membership
-        //             </h1>
-        //             <p className="max-w-2xl font-semibold text-charcoal/70">
-        //                 Lorem ipsum dolor sit amet consectetur, adipisicing
-        //                 elit. Sint molestias consequuntur unde modi voluptatem
-        //                 saepe accusantium ea quam maiores quidem!
-        //             </p>
-        //         </div>
-        //     </div>
-        // </div>
     );
 }

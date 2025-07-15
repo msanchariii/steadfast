@@ -24,7 +24,7 @@ export const memberData: Member[] = [
     {
         id: 3,
         name: "Subhradeep Sardar",
-        role: "Frontend (React & React Native) Developer",
+        role: "React & React Native Developer",
         photo: "/images/alice.jpg",
         quote: "From web to mobile, I bring interfaces to life with React and React Native. This team pushes for speed, clarity, and clean UI — and I love building things users can feel. Every project here is a chance to create something sharp and simple that works.",
     },

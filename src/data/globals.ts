@@ -1,37 +1,54 @@
 export const sectionHeadlines = [
-    { id: 1, section: "hero", headline: "Fast. Scalable. Built with purpose." },
-    { id: 2, section: "about", headline: "Small team. Big on impact." },
+    {
+        id: 1,
+        section: "hero",
+        headline: "Fast, scalable websites — built with purpose and precision.",
+    },
+    {
+        id: 2,
+        section: "about",
+        headline: "We’re a small team, driven by big results.",
+    },
     {
         id: 3,
         section: "services",
-        headline: "More than websites — we build digital experiences.",
+        headline:
+            "Not just services — we create digital experiences that convert.",
     },
     {
         id: 4,
         section: "featuredProjects",
-        headline: "Work we’re proud of — results that speak.",
+        headline: "Real projects, real impact — see what we’ve built.",
     },
-    { id: 5, section: "workflow", headline: "Simple process. Solid outcomes." },
+    {
+        id: 5,
+        section: "workflow",
+        headline: "No guesswork. Just a clear, proven process that works.",
+    },
     {
         id: 6,
         section: "testimonials",
-        headline: "What our clients say — no fluff, just facts.",
+        headline: "Our clients talk results — here’s what they’re saying.",
     },
-    { id: 7, section: "ourTeam", headline: "Meet the crew behind the code." },
+    {
+        id: 7,
+        section: "ourTeam",
+        headline: "Meet the makers behind the code, pixels, and ideas.",
+    },
     {
         id: 8,
         section: "faq",
-        headline: "Got questions? We’ve got real answers.",
+        headline: "Answers to real questions we get asked — no jargon.",
     },
     {
         id: 9,
         section: "contact",
-        headline: "Let’s talk about your next big idea.",
+        headline: "Got a big idea? Let’s bring it to life.",
     },
     {
         id: 10,
         section: "footer",
-        headline: "Crafted with care. Built to perform.",
+        headline: "Built with care, driven by purpose, ready to scale.",
     },
 ];
 
@@ -55,16 +72,16 @@ export const socialLinks = [
     },
 ];
 
-export const email = "steadfastwebstudios@gmail.com"
-
+export const email = "steadfastwebstudios@gmail.com";
 
 export const navbarLinks = [
-    { id: 1, label: "Home", href: "/" },
-    // { id: 2, label: "About", href: "/about" },
-    { id: 3, label: "Our Works", href: "/works" },
-    { id: 3, label: "Pricing", href: "/pricing" },
-    { id: 4, label: "Projects", href: "/projects" },
-    // { id: 5, label: "Contact", href: "/contact" },
+    {
+        id: 0,
+        label: "Home",
+        href: "/",
+    },
+    { id: 1, label: "Our Works", href: "/works" },
+    { id: 2, label: "Pricing", href: "/pricing" },
 ];
 
 export const footerLinks = [
@@ -74,36 +91,14 @@ export const footerLinks = [
     // { id: 5, label: "Contact", href: "/contact" },
 ];
 
+export const sectionDescriptions = {
+    hero: "We build lightning-fast websites and scalable apps that bring your ideas to life. Small team, big results—custom-crafted solutions that work seamlessly across platforms and devices.",
+    about: "We're a tight-knit team of four developers who believe in clean code, purposeful design, and building digital products that are as functional as they are beautiful.",
+    ourWork:
+        "From sleek landing pages to complex web platforms, we take pride in projects that solve problems, look great, and actually perform. Here’s a peek at what we’ve built.",
 
-export const sectionDescriptions = [
-    {
-        id: 1,
-        section: "hero",
-        description:
-            "We build lightning-fast websites and scalable apps that bring your ideas to life. Small team, big results—custom-crafted solutions that work seamlessly across platforms and devices.",
-    },
-    {
-        id: 2,
-        section: "about",
-        description:
-            "We're a tight-knit team of four developers who believe in clean code, purposeful design, and building digital products that are as functional as they are beautiful.",
-    },
-    {
-        id: 3,
-        section: "ourWork",
-        description:
-            "From sleek landing pages to complex web platforms, we take pride in projects that solve problems, look great, and actually perform. Here’s a peek at what we’ve built.",
-    },
-    {
-        id: 4,
-        section: "pricing",
-        description:
-            "Transparent, project-based pricing designed for startups, small businesses, and bold ideas. No hidden fees—just clear packages that scale with your vision and budget.",
-    },
-    {
-        id: 5,
-        section: "contact",
-        description:
-            "Have a project in mind or just want to say hi? We’d love to chat. Drop us a message and let’s start building something awesome together.",
-    },
-];
+    pricing:
+        "Transparent, project-based pricing designed for startups, small businesses, and bold ideas. No hidden fees—just clear packages that scale with your vision and budget.",
+    contact:
+        "Have a project in mind or just want to say hi? We’d love to chat. Drop us a message and let’s start building something awesome together.",
+};

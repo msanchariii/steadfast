@@ -1,3 +1,4 @@
+import { OurTeamHeadline } from "@/data/SectionHeadlines";
 import { Member, memberData } from "@/data/team";
 import Image from "next/image";
 import React from "react";
@@ -5,11 +6,7 @@ import React from "react";
 const OurTeam = () => {
     return (
         <section className="bg-black text-zinc-200">
-            <h2 className="mb-6 font-semibold">[Our Team]</h2>
-            <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
-                Not just <span className="text-lavender-dark">services</span> -
-                we deliver growth, clarity, and real impact.
-            </h1>
+            <OurTeamHeadline />
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
                 <div className="col-span-full flex flex-col gap-8 rounded-md p-6 ring-1 ring-zinc-800 lg:flex-row">
                     <Image
@@ -53,7 +50,7 @@ const TeamMemberCard = ({
         <div
             className={`flex flex-col rounded-md p-6 ring-1 ring-zinc-800 ${className}`}
         >
-            <div className="flex items-center gap-3">
+            <div className="flex h-16 items-center gap-3">
                 <div className="size-8 rounded-full bg-zinc-200"></div>
                 <div>
                     <h5 className="text-xl font-bold">{member.name}</h5>

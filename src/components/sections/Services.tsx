@@ -1,14 +1,12 @@
 import React from "react";
 import ContactCardInServiceSection from "../ServiceCards";
+import { homePageServices } from "@/data/services";
+import { ServicesHeadline } from "@/data/SectionHeadlines";
 
 const Services = () => {
     return (
-        <section className="relative">
-            <h2 className="sr-only">Services</h2>
-            <h2 className="mb-6 font-semibold">[Services]</h2>
-            <h3 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
-                Not just services - we deliver growth, clarity, and real impact.
-            </h3>
+        <section className="relative" id="services">
+            <ServicesHeadline />
             <div>
                 <ServiceCards
                     title={"Brand Strategy & Identity"}
@@ -16,24 +14,13 @@ const Services = () => {
                         "Strategic identities that communicate your story clearly, setting your brand apart and building authentic connections with your audience."
                     }
                 />
-                <ServiceCards
-                    title={"Brand Strategy & Identity"}
-                    desc={
-                        "Strategic identities that communicate your story clearly, setting your brand apart and building authentic connections with your audience."
-                    }
-                />
-                <ServiceCards
-                    title={"Brand Strategy & Identity"}
-                    desc={
-                        "Strategic identities that communicate your story clearly, setting your brand apart and building authentic connections with your audience."
-                    }
-                />
-                <ServiceCards
-                    title={"Brand Strategy & Identity"}
-                    desc={
-                        "Strategic identities that communicate your story clearly, setting your brand apart and building authentic connections with your audience."
-                    }
-                />
+                {homePageServices.map((service) => (
+                    <ServiceCards
+                        key={service.id + service.title}
+                        title={service.title}
+                        desc={service.description}
+                    />
+                ))}
                 <ContactCardInServiceSection />
             </div>
         </section>
