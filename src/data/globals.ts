@@ -55,21 +55,16 @@ export const socialLinks = [
     },
 ];
 
-export const email = [
-    {
-        id: 1,
-        platform: "Email",
-        link: "mailto:steadfastwebstudios@gmail.com",
-    },
-];
+export const email = "steadfastwebstudios@gmail.com"
 
 
 export const navbarLinks = [
     { id: 1, label: "Home", href: "/" },
-    { id: 2, label: "About", href: "/about" },
-    { id: 3, label: "Services", href: "/services" },
+    // { id: 2, label: "About", href: "/about" },
+    { id: 3, label: "Our Works", href: "/works" },
+    { id: 3, label: "Pricing", href: "/pricing" },
     { id: 4, label: "Projects", href: "/projects" },
-    { id: 5, label: "Contact", href: "/contact" },
+    // { id: 5, label: "Contact", href: "/contact" },
 ];
 
 export const footerLinks = [
