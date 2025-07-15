@@ -1,5 +1,6 @@
 import React from "react";
 import Navlink from "./navbar/Navlink";
+import { socialLinks } from "@/data/globals";
 
 const Footer = () => (
     <footer className="mt-6 min-h-[50dvh] rounded-t-2xl bg-black px-6 py-8 text-white md:mx-2 md:mb-2 md:rounded-2xl xl:mt-24 xl:px-12 2xl:px-16">
@@ -11,9 +12,16 @@ const Footer = () => (
                 <Navlink label="Privacy Policy" href="/privacy-policy" />
             </div>
             <div className="flex flex-col items-end gap-6 text-zinc-400 lg:flex-row">
-                <Navlink label="Twitter" href="#" />
-                <Navlink label="GitHub" href="#" />
-                <Navlink label="LinkedIn" href="#" />
+                {socialLinks.map((social) => {
+                    return (
+                        <Navlink
+                            key={social.id}
+                            label={social.platform}
+                            href={social.link}
+                            // className="text-zinc-400"
+                        />
+                    );
+                })}
             </div>
         </div>
         <div className="flex h-48 items-center justify-start lg:h-64 lg:justify-center">
