@@ -24,9 +24,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${inter.variable} bg-white antialiased`}>
                 <Navbar />
-                <main className="container m-0 mx-auto max-w-[95dvw] rounded-4xl bg-zinc-50 px-6 py-8 md:px-12 lg:py-16 xl:max-w-7xl xl:py-20">
-                    {children}
-                </main>
+                <main className="m-0 mx-auto w-full py-6">{children}</main>
                 <Footer />
             </body>
         </html>

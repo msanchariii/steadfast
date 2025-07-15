@@ -3,12 +3,12 @@ import ContactCardInServiceSection from "../ServiceCards";
 
 const Services = () => {
     return (
-        <section className="relative container mx-auto my-12 min-h-dvh px-0">
+        <section className="relative">
             <h2 className="sr-only">Services</h2>
             <h2 className="mb-6 font-semibold">[Services]</h2>
-            <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
+            <h3 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
                 Not just services - we deliver growth, clarity, and real impact.
-            </h1>
+            </h3>
             <div>
                 <ServiceCards
                     title={"Brand Strategy & Identity"}

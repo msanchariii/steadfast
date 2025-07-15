@@ -130,4 +130,8 @@
     button {
         @apply cursor-pointer font-semibold;
     }
+
+    section {
+        @apply mb-32 rounded-t-4xl bg-zinc-50 px-6 py-12 md:mx-6 md:rounded-2xl md:py-16 xl:mx-8 xl:px-16 xl:py-24 2xl:px-24;
+    }
 }

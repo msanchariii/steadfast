@@ -63,7 +63,7 @@ const Workflow = () => {
     }, []);
 
     return (
-        <section className="relative container mx-auto mt-12 min-h-dvh">
+        <section className="relative min-h-dvh">
             {/* <h2 className="sr-only">Workflow</h2> */}
             <h2 className="mb-6 font-semibold">[Workflow]</h2>
             <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
@@ -75,7 +75,7 @@ const Workflow = () => {
                 }
                 id="workflow-section"
             >
-                <div className="max-h-dvh p-2 xl:basis-1/2">
+                <div className="max-h-dvh xl:basis-1/2">
                     <p className="w-4/5 text-4xl font-bold">
                         No guesswork, just a{" "}
                         <span className="text-lavender-dark">clear path</span>{" "}
@@ -85,7 +85,7 @@ const Workflow = () => {
                     </p>
                 </div>
                 <div
-                    className="mt-12 w-full space-y-2 p-2 xl:relative xl:right-0 xl:left-0 xl:mt-0 xl:h-dvh xl:basis-1/2"
+                    className="mt-12 w-full space-y-2 xl:relative xl:right-0 xl:left-0 xl:mt-0 xl:h-dvh xl:basis-1/2"
                     id="workflow-cards"
                 >
                     {cards.map((card, i: number) => (

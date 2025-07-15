@@ -4,7 +4,7 @@ import React from "react";
 
 const Testimonial = () => {
     return (
-        <section className="container mt-48">
+        <section className="">
             <h2 className="mb-6 font-semibold">[Testimonials]</h2>
             <h1 className="mb-16 text-4xl leading-12 font-bold tracking-tight text-wrap md:text-5xl xl:max-w-4xl xl:text-6xl xl:leading-16">
                 Not just services - we deliver growth, clarity, and real impact.
@@ -34,7 +34,7 @@ const TestimonialCard = ({
 }) => {
     return (
         <div
-            className={`before:border-b-lavender-dark relative h-fit w-full rounded-tr-2xl rounded-b-2xl bg-zinc-100 px-6 py-6 text-black before:absolute before:top-[-24px] before:left-0 before:h-0 before:w-0 before:border-r-[20px] before:border-b-[20px] before:border-r-transparent before:content-[''] ${className}`}
+            className={`before:border-b-lavender-dark ring-lavender relative h-fit w-full rounded-tr-2xl rounded-b-2xl bg-zinc-100 px-6 py-6 text-black ring-1 before:absolute before:top-[-24px] before:left-0 before:h-0 before:w-0 before:border-r-[20px] before:border-b-[20px] before:border-r-transparent before:content-[''] ${className}`}
         >
             <div className="flex h-full w-full flex-col gap-4">
                 <div className="text-lavender-dark font-semibold">

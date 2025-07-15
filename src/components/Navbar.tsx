@@ -42,7 +42,7 @@ const Navbar = () => {
     }, [isOpen]);
 
     return (
-        <header className="mx-auto my-4 flex h-16 max-w-6xl items-center justify-between">
+        <header className="mx-auto mt-4 flex h-16 max-w-6xl items-center justify-between">
             <Link href={"/"} className="flex items-center gap-x-4">
                 <img
                     src={"/assets/global/logo-light.svg"}

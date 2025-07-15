@@ -24,7 +24,7 @@ const WorkPage = () => {
     );
 };
 
-const WorkCard = ({ work }: { work: Work }) => {
+export const WorkCard = ({ work }: { work: Work }) => {
     return (
         <div className="flex flex-col flex-wrap py-4 text-left lg:flex-row">
             <div className="flex w-full flex-col lg:w-1/2">

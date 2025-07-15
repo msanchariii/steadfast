@@ -72,7 +72,7 @@ export default function Hero() {
 
     return (
         <>
-            <section className="container mx-auto flex min-h-[100dvh] w-full max-w-6xl flex-col justify-center">
+            <section className="flex flex-col justify-center">
                 {/* <h1
                     ref={titleRef}
                     className="text-charcoal text-7xl leading-16 font-bold tracking-tight md:text-9xl"
@@ -101,14 +101,6 @@ export default function Hero() {
                             </h4>
                             <h4 className="text-xs font-normal">
                                 Years of Experience
-                            </h4>
-                        </li>
-                        <li className="stat-list">
-                            <h4 className="text-3xl font-semibold text-black">
-                                100%
-                            </h4>
-                            <h4 className="text-xs font-normal">
-                                Happy Clients
                             </h4>
                         </li>
                     </ul>
