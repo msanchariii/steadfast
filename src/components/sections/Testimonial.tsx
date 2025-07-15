@@ -34,7 +34,7 @@ const TestimonialCard = ({
 }) => {
     return (
         <div
-            className={`bg-lavender/20 before:border-b-lavender-dark relative h-fit w-full rounded-tr-2xl rounded-b-2xl px-6 py-6 text-black before:absolute before:top-[-24px] before:left-0 before:h-0 before:w-0 before:border-r-[20px] before:border-b-[20px] before:border-r-transparent before:content-[''] ${className}`}
+            className={`before:border-b-lavender-dark relative h-fit w-full rounded-tr-2xl rounded-b-2xl bg-zinc-100 px-6 py-6 text-black before:absolute before:top-[-24px] before:left-0 before:h-0 before:w-0 before:border-r-[20px] before:border-b-[20px] before:border-r-transparent before:content-[''] ${className}`}
         >
             <div className="flex h-full w-full flex-col gap-4">
                 <div className="text-lavender-dark font-semibold">
