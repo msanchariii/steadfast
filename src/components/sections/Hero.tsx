@@ -1,4 +1,5 @@
 "use client";
+import { sectionDescriptions } from "@/data/globals";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
@@ -73,12 +74,6 @@ export default function Hero() {
     return (
         <>
             <section className="flex flex-col justify-center">
-                {/* <h1
-                    ref={titleRef}
-                    className="text-charcoal text-7xl leading-16 font-bold tracking-tight md:text-9xl"
-                >
-                    SteadFast
-                </h1> */}
                 <Image
                     src={"/assets/global/logo-with-tagline.svg"}
                     height={300}
@@ -108,9 +103,11 @@ export default function Hero() {
                         className="text-charcoal/70 max-w-xl text-xs font-medium tracking-wide"
                         id="hero-description"
                     >
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Sint molestias consequuntur unde modi voluptatem
-                        saepe accusantium Lorem ipsum dolor sit amet.
+                        {
+                            sectionDescriptions.find(
+                                (desc) => desc.section === "hero",
+                            )?.description
+                        }
                     </p>
                 </div>
                 <div className="mt-24 hidden w-full px-4 text-zinc-700 lg:flex lg:items-center lg:justify-around lg:gap-4 lg:opacity-90">

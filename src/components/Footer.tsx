@@ -1,15 +1,18 @@
 import React from "react";
 import Navlink from "./navbar/Navlink";
-import { socialLinks } from "@/data/globals";
+import { footerLinks, socialLinks } from "@/data/globals";
 
 const Footer = () => (
     <footer className="mt-6 min-h-[50dvh] rounded-t-2xl bg-black px-6 py-8 text-white md:mx-2 md:mb-2 md:rounded-2xl xl:mt-24 xl:px-12 2xl:px-16">
         <div className="flex justify-between text-xs font-medium text-zinc-200">
             <div className="flex flex-col items-start gap-6 text-zinc-400 lg:flex-row">
-                <Navlink label="Projects" href="/projects" />
-
-                <Navlink label="Contact" href="/contact" />
-                <Navlink label="Privacy Policy" href="/privacy-policy" />
+                {footerLinks.map((link) => (
+                    <Navlink
+                        key={link.id + "footerLink"}
+                        label={link.label}
+                        href={link.href}
+                    />
+                ))}
             </div>
             <div className="flex flex-col items-end gap-6 text-zinc-400 lg:flex-row">
                 {socialLinks.map((social) => {

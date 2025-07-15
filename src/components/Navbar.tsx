@@ -7,6 +7,7 @@ import { useMediaQuery } from "react-responsive";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import AnimatedButton from "./AnimatedButton";
+import { navbarLinks } from "@/data/globals";
 
 const Navbar = () => {
     const [hasMounted, setHasMounted] = useState(false);
@@ -63,9 +64,13 @@ const Navbar = () => {
                               } rounded-b-3xl bg-white p-8 text-black`
                     }`}
                 >
-                    <Navlink label="Our Works" href="/works" />
-                    <Navlink label="Pricing" href="/pricing" />
-                    <Navlink label="About" href="/about" />
+                    {navbarLinks.map((link) => (
+                        <Navlink
+                            key={"navlink" + link.id}
+                            label={link.label}
+                            href={link.href}
+                        />
+                    ))}
                 </nav>
             )}
             <AnimatedButton
