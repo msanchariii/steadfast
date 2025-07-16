@@ -30,7 +30,7 @@ const Pricing = () => {
                     Perfect for brands that need a full-service launch, a
                     one-off redesign, or a focused creative sprint.
                 </p>
-                <h2 className="mb-1 text-3xl font-bold">From $1,499</h2>
+                <h2 className="mb-1 text-3xl font-bold">From Rs. 3000</h2>
             </div>
             <div className="flex flex-col gap-4 lg:flex-row lg:justify-between">
                 <div className="mt-8 w-full space-y-4 lg:w-1/2">
@@ -84,7 +84,7 @@ const Pricing = () => {
                     budget.
                 </p>
                 <Link
-                    href={"/contact"}
+                    href={"/get-a-quote"}
                     onMouseEnter={onMouseEnterGetAQuote}
                     onMouseLeave={onMouseLeaveGetAQuote}
                     className="flex h-16 w-full items-center justify-center gap-2 overflow-y-hidden rounded-full bg-black py-4 text-center text-white md:order-1 md:max-w-xs"

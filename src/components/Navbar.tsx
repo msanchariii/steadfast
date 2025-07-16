@@ -2,11 +2,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import Navlink from "./navbar/Navlink";
 import Link from "next/link";
-import { AlignJustify, X } from "lucide-react";
+import { AlignJustify, MoveUpRight, X } from "lucide-react";
 import { useMediaQuery } from "react-responsive";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import AnimatedButton from "./AnimatedButton";
 import { navbarLinks } from "@/data/globals";
 import Image from "next/image";
 
@@ -75,11 +74,12 @@ const Navbar = () => {
                     ))}
                 </nav>
             )}
-            <AnimatedButton
-                label1="Contact Us"
-                label2="Get A Quote"
-                className="hidden xl:flex"
-            />
+            <Link
+                href={"/get-a-quote"}
+                className="flex items-center gap-1 hover:underline"
+            >
+                Get a Quote <MoveUpRight size={20} />
+            </Link>
             <button className="block xl:hidden" onClick={handleToggle}>
                 <span
                     ref={menuRef}

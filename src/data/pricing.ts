@@ -103,7 +103,7 @@ export function calculateQuote({
     currency: TCurrency;
     features: TFeature[]; // 💡 Added this!
 }): number {
-    let total = 0;
+    let total = 3000;
 
     // 📄 Extra Pages
     const basePages = unitPricing.pages.base;
