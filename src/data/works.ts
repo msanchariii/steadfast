@@ -11,25 +11,27 @@ export type Work = {
 export const workData: Work[] = [
     {
         id: "1",
-        title: "Project Alpha",
-        year: "2020",
-        description: "A comprehensive project that showcases our capabilities.",
+        title: "Rustic Charm Homestay",
+        year: "2024",
+        description:
+            "Rustic Charm Homestay is a responsive single-page booking-focused website built using Next.js (or whichever tech you used). It features a gallery, pricing section, and contact form to provide a cozy, immersive user experience for potential guests.",
         imageUrls: [
-            "https://example.com/image1.jpg",
-            "https://example.com/image2.jpg",
+            "/assets/projects/homestay1.webp",
+            "/assets/projects/homestay2.webp",
         ],
-        liveUrl: "https://example.com/live-alpha",
-        sampleUrl: "https://example.com/sample-alpha",
+        liveUrl: "https://msanchariii.github.io/rustic-charm/",
+        // sampleUrl: "https://example.com/sample-alpha",
     },
     {
         id: "2",
-        title: "Project Beta",
-        year: "2021",
-        description: "An innovative solution that addresses key challenges.",
+        title: "Music School Website",
+        year: "2025",
+        description:
+            "A responsive, multi-section music school landing page designed to engage prospective students with clear navigation to “Home,” “Courses,” and “Contact Us.” The homepage promotes key offerings like Guitar Fundamentals, Advanced Vocal Techniques, and Music Production courses—encouraging exploration and enrollment.",
         imageUrls: [
-            "https://example.com/image3.jpg",
-            "https://example.com/image4.jpg",
+            "/assets/projects/musico1.webp",
+            "/assets/projects/musico2.webp",
         ],
-        liveUrl: "https://example.com/live-beta",
+        liveUrl: "https://music-school-website-zeta.vercel.app/",
     },
 ];
