@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import AnimatedButton from "./AnimatedButton";
 import { navbarLinks } from "@/data/globals";
+import Image from "next/image";
 
 const Navbar = () => {
     const [hasMounted, setHasMounted] = useState(false);
@@ -45,10 +46,11 @@ const Navbar = () => {
     return (
         <header className="mx-auto mt-4 flex h-16 max-w-6xl items-center justify-between">
             <Link href={"/"} className="flex items-center gap-x-4">
-                <img
+                <Image
                     src={"/assets/global/logo-light.svg"}
                     width={40}
                     height={40}
+                    alt="SteadFast Studio Logo"
                 />
                 <img src="/assets/global/logo.svg" width={150} />
             </Link>
