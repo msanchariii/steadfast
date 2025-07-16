@@ -1,27 +1,27 @@
 export const pricingPlans = [
     {
+        id: 4,
+        service: "Figma to Code",
+        pricingRupees: 3500, // approx ₹125,000
+        priceDollars: 1499,
+    },
+    {
         id: 1,
         service: "Landing Page",
-        pricingRupees: 166000, // approx ₹166,000
+        pricingRupees: 5000, // approx ₹166,000
         priceDollars: 1999,
     },
     {
         id: 2,
         service: "Full Website",
-        pricingRupees: 416000, // approx ₹416,000
+        pricingRupees: 8000, // approx ₹416,000
         priceDollars: 4999,
     },
     {
         id: 3,
-        service: "Branding Package",
-        pricingRupees: 250000, // approx ₹250,000
+        service: "CMS Integration",
+        pricingRupees: 10000, // approx ₹250,000
         priceDollars: 2999,
-    },
-    {
-        id: 4,
-        service: "Packaging Design",
-        pricingRupees: 125000, // approx ₹125,000
-        priceDollars: 1499,
     },
 ];
 
@@ -34,7 +34,6 @@ export const whatsIncluded = [
 ];
 
 // pricingConfig.ts
-
 export const unitPricing = {
     currency: {
         INR: "₹",
@@ -42,79 +41,99 @@ export const unitPricing = {
     },
     pages: {
         base: 3,
-        // Most freelancers charge ~$100–200/page for static sites (or $1000–3000 total for basic sites)
         pricePerPage: {
-            INR: 1000, // ~$36
+            INR: 1000,
             USD: 15,
         },
     },
-    uiUxDesign: {
-        // UI/UX design alone often goes $30–100/hr; for a project ~= 5–10 hrs/page
-        INR: 2500, // ~$72
-        USD: 40,
-    },
-    contactForm: {
-        // Setup with validation typically $100–200 fixed
-        INR: 300, // ~$10
-        USD: 5,
-    },
-    animations: {
-        // Basic animations or micro-interactions ~$200–500
-        INR: 2000, // ~$48
-        USD: 25,
-    },
-    seoSetup: {
-        // Basic SEO including metadata, sitemap ~$100–300
-        INR: 300, // ~$18
-        USD: 5,
-    },
-    deployment: {
-        // Hosting, SSL, deployment ~2–4 hrs
-        INR: 3000, // ~$36
-        USD: 40,
-        note: "We will transfer the ownership to the client after completing the project .",
-    },
-    domainSetup: {
-        INR: 0, // ~$10
-        USD: 0,
-        note: "We will only charge the price for buying the domain.",
-    },
-    cmsIntegration: {
-        // Handled in 5–10 hrs depending CMS
-        INR: 10000, // ~$120
-        USD: 150,
-    },
-    backend: {
-        basicAPI: {
-            // CRUD API endpoints ~$200–500
-            INR: 8000, // ~$96
-            USD: 120,
+    design: {
+        custom: {
+            INR: 2500,
+            USD: 40,
         },
-        authSystem: {
-            INR: 6000, // ~$72
-            USD: 100,
+        figma: {
+            INR: 0,
+            USD: 15,
         },
-        dbIntegration: {
-            INR: 6000, // ~$72
-            USD: 100,
-        },
-        fullStack: {
-            // End‑to‑end backend + DB + API
-            INR: 24000, // ~$288
-            USD: 360,
+        template: {
+            INR: 0,
+            USD: 0,
         },
     },
-    ongoingMaintenance: {
-        // Freelancers often charge $200–500/mo for updates/support
-        monthly: {
-            INR: 16000, // ~$192
-            USD: 240,
-        },
-        yearlyDiscount: {
-            // ~2 months free if paid annually
-            INR: 160000, // ~$1,920
-            USD: 2400,
-        },
+    backendTech: {
+        none: { INR: 0, USD: 0 },
+        express: { INR: 5000, USD: 100 },
+        nestjs: { INR: 7000, USD: 120 },
+        nextjs: { INR: 5000, USD: 110 },
+        cms: { INR: 5000, USD: 150 },
+    },
+    features: {
+        auth: { INR: 3000, USD: 100 },
+        dbIntegration: { INR: 2000, USD: 100 },
+        docker: { INR: 2000, USD: 60 },
+    },
+    addons: {
+        seo: { INR: 300, USD: 5 },
+        chatbot: { INR: 2000, USD: 25 },
+        animations: { INR: 2000, USD: 20 },
+        dns: { INR: 0, USD: 0 },
+        deployment: { INR: 2000, USD: 30 },
     },
 };
 
+export type TCurrency = "INR" | "USD";
+export type TDesignType = "custom" | "figma" | "template";
+export type TBackendTech = keyof typeof unitPricing.backendTech;
+export type TFeature = keyof typeof unitPricing.features;
+export type TAddon = keyof typeof unitPricing.addons;
+// type TFeature = keyof typeof unitPricing.features;
+
+export function calculateQuote({
+    pages,
+    design,
+    backend,
+    selectedAddons,
+    currency,
+    features,
+}: {
+    pages: number;
+    design: TDesignType;
+    backend: TBackendTech;
+    selectedAddons: TAddon[];
+    currency: TCurrency;
+    features: TFeature[]; // 💡 Added this!
+}): number {
+    let total = 0;
+
+    // 📄 Extra Pages
+    const basePages = unitPricing.pages.base;
+    const extraPages = Math.max(pages - basePages, 0);
+    total += extraPages * unitPricing.pages.pricePerPage[currency];
+
+    // 🎨 Design
+    total += unitPricing.design[design][currency];
+
+    // 🛠️ Backend
+    total += unitPricing.backendTech[backend][currency];
+
+    // ➕ Add-ons
+    selectedAddons.forEach((addon) => {
+        const addonPrice =
+            unitPricing.addons[addon as keyof typeof unitPricing.addons][
+                currency
+            ];
+        total += addonPrice;
+    });
+
+    // 🌟 Features
+    features.forEach((feature) => {
+        const featurePrice =
+            unitPricing.features[feature as keyof typeof unitPricing.features][
+                currency
+            ];
+        total += featurePrice;
+    });
+
+    // 💰 Return total quote
+    return total;
+}
