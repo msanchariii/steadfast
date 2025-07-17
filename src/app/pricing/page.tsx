@@ -2,6 +2,12 @@ import Pricing from "@/components/sections/Pricing";
 import { sectionDescriptions } from "@/data/globals";
 import React from "react";
 
+export const metadata = {
+    title: "Pricing",
+    description:
+        "Discover our transparent pricing plans designed for startups, creators, and small teams. Get fast, scalable websites and digital products that fit your budget.",
+};
+
 const PricingPage = () => {
     return (
         <section>

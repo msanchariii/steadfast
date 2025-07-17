@@ -4,6 +4,12 @@ import { workData } from "@/data/works";
 
 import React from "react";
 
+export const metadata = {
+    title: "Our Work",
+    description:
+        "Explore our portfolio of fast, scalable websites and digital products crafted for startups, creators, and small teams.",
+};
+
 const WorkPage = () => {
     return (
         <section>

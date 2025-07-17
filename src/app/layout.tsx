@@ -82,7 +82,7 @@ export const metadata: Metadata = {
         title: "SteadFast Studio", // Title on Twitter
         description: "Your partner in digital excellence.",
         // images: ["https://steadfastweb.studio/og-image.png"],
-        creator: "@hulo_uwu", // Your Twitter handle
+        creator: "@steadfastss", // Your Twitter handle
     },
 
     // ✅ Optional: Canonical URL to avoid duplicate SEO issues

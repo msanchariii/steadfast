@@ -19,6 +19,22 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { calculateQuote, unitPricing } from "@/data/pricing";
 
+/*
+Sample Response:
+{
+  "pages": "5-10",
+  "design": "Custom UI/UX",
+  "backend": "Node.js",
+  "addons": "Payment Gateway, User Authentication",
+  "features": "Product Catalog, Shopping Cart, Admin Dashboard",
+  "currency": "USD",
+  "budget": "10000-20000",
+  "estimatedCost": "15000",
+  "date": "2025-07-17"
+}
+
+*/
+
 const CurrencySign = ({ currency }: { currency: TCurrency }) => {
     return <span>{currency === "INR" ? "₹" : "$"}</span>;
 };
