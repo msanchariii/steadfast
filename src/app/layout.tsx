@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { GsapProvider } from "@/context/GsapProvider";
 
 const inter = Inter({
     variable: "--font-inter",
@@ -96,9 +97,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${inter.variable} bg-white antialiased`}>
-                <Navbar />
-                <main className="m-0 mx-auto w-full py-6">{children}</main>
-                <Footer />
+                <GsapProvider>
+                    <Navbar />
+                    <main className="m-0 mx-auto w-full py-6">{children}</main>
+                    <Footer />
+                </GsapProvider>
             </body>
         </html>
     );

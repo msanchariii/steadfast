@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
-
+// import { ScrollTrigger } from "gsap/all";
 const cards = [
     {
         id: "01",
