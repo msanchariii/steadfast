@@ -56,7 +56,7 @@ export const socialLinks = [
     {
         id: 1,
         platform: "LinkedIn",
-        username: "youragency",
+        username: "steadfast-studio",
         link: "https://www.linkedin.com/company/steadfast-studio/",
     },
     {
@@ -68,11 +68,12 @@ export const socialLinks = [
     {
         id: 3,
         platform: "Portfolio",
-        link: "https://steadfastweb.studio/",
+        link: "https://steadfastweb.studio/works",
     },
 ];
 
-export const email = "steadfastwebstudios@gmail.com";
+export const email = "hello@steadfastweb.studio";
+export const phone = "+91 9239505770";
 
 export const navbarLinks = [
     {

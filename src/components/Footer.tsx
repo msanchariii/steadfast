@@ -1,6 +1,6 @@
 import React from "react";
 import Navlink from "./navbar/Navlink";
-import { footerLinks, socialLinks } from "@/data/globals";
+import { email, footerLinks, phone, socialLinks } from "@/data/globals";
 
 const Footer = () => (
     <footer className="min-h-[50dvh] rounded-t-2xl bg-black px-6 py-8 text-white md:mx-2 md:mb-2 md:rounded-2xl xl:px-12 2xl:px-16">
@@ -37,11 +37,11 @@ const Footer = () => (
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="font-medium lg:order-2">
                 <p className="text-zinc-400">Email</p>
-                <p className="">steadfastwebstudios@gmail.com</p>
+                <p className="">{email}</p>
             </div>
             <div className="font-medium lg:order-3">
-                <p className="text-zinc-400">Address</p>
-                <p>Kolkata, India</p>
+                <p className="text-zinc-400">Phone</p>
+                <p className="">{phone}</p>
             </div>
             <div className="flex items-end justify-between lg:order-1 lg:gap-6">
                 <div>
