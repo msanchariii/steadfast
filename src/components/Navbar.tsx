@@ -76,7 +76,7 @@ const Navbar = () => {
             )}
             <Link
                 href={"/get-a-quote"}
-                className="flex items-center gap-1 hover:underline"
+                className="hidden gap-1 hover:underline xl:flex xl:items-center"
             >
                 Get a Quote <MoveUpRight size={20} />
             </Link>
