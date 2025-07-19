@@ -1,3 +1,5 @@
+import { email, phone } from "@/data/globals";
+import { MailIcon, MapIcon, PhoneCall } from "lucide-react";
 import React from "react";
 
 const Contact = () => {
@@ -15,111 +17,56 @@ const Contact = () => {
             <div className="rounded-lg p-8 shadow-xl lg:p-12">
                 <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
                     <div className="flex flex-col items-center text-center">
-                        <div className="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-500">
-                            <svg
-                                className="h-10 w-10"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                ></path>
-                            </svg>
+                        <div className="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-zinc-100 text-zinc-500">
+                            <MailIcon className="h-10 w-10" />
                         </div>
                         <div className="flex-grow">
-                            <h2 className="title-font mb-3 text-xl font-semibold text-gray-900">
+                            <h2 className="title-font mb-3 text-xl font-semibold text-zinc-300">
                                 Email Us
                             </h2>
-                            <p className="mb-3 text-base leading-relaxed text-gray-600">
+                            <p className="mb-3 text-base leading-relaxed text-zinc-400">
                                 Our support team is here to help.
                             </p>
                             <a
-                                href="mailto:contact@example.com"
-                                className="font-medium text-indigo-500 transition-colors duration-300 hover:text-indigo-700"
+                                href={`mailto:${email}`}
+                                className="font-medium text-zinc-500 transition-colors duration-300 hover:text-zinc-700"
                             >
-                                contact@example.com
+                                {email}
                             </a>
                         </div>
                     </div>
 
                     <div className="flex flex-col items-center text-center">
-                        <div className="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-500">
-                            <svg
-                                className="h-10 w-10"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                                ></path>
-                            </svg>
+                        <div className="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-zinc-100 text-zinc-500">
+                            <PhoneCall className="h-10 w-10" />
                         </div>
                         <div className="flex-grow">
-                            <h2 className="title-font mb-3 text-xl font-semibold text-gray-900">
+                            <h2 className="title-font mb-3 text-xl font-semibold text-zinc-300">
                                 Call Us
                             </h2>
-                            <p className="mb-3 text-base leading-relaxed text-gray-600">
-                                Mon-Fri from 8am to 5pm.
+                            <p className="mb-3 text-base leading-relaxed text-zinc-400">
+                                Mon-Fri from 9am to 6pm.
                             </p>
                             <a
-                                href="tel:+15551234567"
-                                className="font-medium text-indigo-500 transition-colors duration-300 hover:text-indigo-700"
+                                href={`tel:${phone}`}
+                                className="font-medium text-zinc-500 transition-colors duration-300 hover:text-zinc-700"
                             >
-                                +1 (555) 123-4567
+                                {phone}
                             </a>
                         </div>
                     </div>
 
                     <div className="flex flex-col items-center text-center">
-                        <div className="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-500">
-                            <svg
-                                className="h-10 w-10"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                                ></path>
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                                ></path>
-                            </svg>
+                        <div className="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-zinc-100 text-zinc-500">
+                            <MapIcon className="h-10 w-10" />
                         </div>
                         <div className="flex-grow">
-                            <h2 className="title-font mb-3 text-xl font-semibold text-gray-900">
-                                Visit Us
+                            <h2 className="title-font mb-3 text-xl font-semibold text-zinc-300">
+                                Address
                             </h2>
-                            <p className="mb-3 text-base leading-relaxed text-gray-600">
-                                123 Main Street, Suite 400
-                                <br />
-                                Anytown, USA 12345
+                            <p className="mb-3 text-base leading-relaxed text-zinc-400">
+                                Kolkata, West Bengal <br /> India
                             </p>
-                            <a
-                                href="https://www.google.com/maps/search/?api=1&query=123+Main+Street+Anytown+USA"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="font-medium text-indigo-500 transition-colors duration-300 hover:text-indigo-700"
-                            >
-                                Get Directions
-                            </a>
                         </div>
                     </div>
                 </div>

@@ -76,9 +76,9 @@ const Navbar = () => {
             )}
             <Link
                 href={"/get-a-quote"}
-                className="hidden gap-1 hover:underline xl:flex xl:items-center"
+                className="hidden gap-1 hover:underline xl:flex xl:items-center xl:justify-center"
             >
-                Get a Quote <MoveUpRight size={20} />
+                Get a Quote <MoveUpRight size={16} />
             </Link>
             <button className="block xl:hidden" onClick={handleToggle}>
                 <span

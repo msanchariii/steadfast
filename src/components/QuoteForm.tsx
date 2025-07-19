@@ -161,7 +161,7 @@ const QuoteForm = () => {
             <button
                 type="submit"
                 disabled={submitting}
-                className="w-full rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="w-full rounded-md bg-zinc-700 px-4 py-2 text-white hover:bg-zinc-600 focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
             >
                 Submit Quote
             </button>
