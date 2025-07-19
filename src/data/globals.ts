@@ -89,7 +89,6 @@ export const footerLinks = [
     { id: 2, label: "Services", href: "/#services" },
     { id: 3, label: "Our Team", href: "/#our-team" },
     { id: 4, label: "FAQ", href: "/#faq" },
-    // { id: 5, label: "Contact", href: "/contact" },
 ];
 
 export const sectionDescriptions = {

@@ -53,7 +53,7 @@ const ContactCardInServiceSection = () => {
             onMouseLeave={onMouseLeave}
             className="relative container mx-auto my-4 flex cursor-pointer flex-col items-center justify-between overflow-hidden rounded-lg bg-black px-12 py-10 text-2xl xl:flex-row"
         >
-            <a className="absolute inset-0 z-20" href="/contact"></a>
+            <a className="absolute inset-0 z-20" href="/get-a-quote"></a>
             <h3
                 ref={titleRef}
                 className="hidden max-w-md font-medium text-zinc-100 xl:block"
