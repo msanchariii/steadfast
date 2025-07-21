@@ -9,19 +9,19 @@ export type Work = {
 };
 
 export const workData: Work[] = [
-    {
-        id: "1",
-        title: "Rustic Charm Homestay",
-        year: "2024",
-        description:
-            "Rustic Charm Homestay is a responsive single-page booking-focused website built using Next.js (or whichever tech you used). It features a gallery, pricing section, and contact form to provide a cozy, immersive user experience for potential guests.",
-        imageUrls: [
-            "/assets/projects/homestay1.webp",
-            "/assets/projects/homestay2.webp",
-        ],
-        liveUrl: "https://msanchariii.github.io/rustic-charm/",
-        // sampleUrl: "https://example.com/sample-alpha",
-    },
+    // {
+    //     id: "1",
+    //     title: "Rustic Charm Homestay",
+    //     year: "2024",
+    //     description:
+    //         "Rustic Charm Homestay is a responsive single-page booking-focused website built using Next.js (or whichever tech you used). It features a gallery, pricing section, and contact form to provide a cozy, immersive user experience for potential guests.",
+    //     imageUrls: [
+    //         "/assets/projects/homestay1.webp",
+    //         "/assets/projects/homestay2.webp",
+    //     ],
+    //     liveUrl: "https://msanchariii.github.io/rustic-charm/",
+    //     // sampleUrl: "https://example.com/sample-alpha",
+    // },
     {
         id: "2",
         title: "Music School Website",
