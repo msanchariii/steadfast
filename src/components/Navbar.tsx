@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import Navlink from "./navbar/Navlink";
+// import Navlink from "./navbar/Navlink";
 import Link from "next/link";
-import { AlignJustify, MoveUpRight, X } from "lucide-react";
+import { AlignJustify, X } from "lucide-react";
 import { useMediaQuery } from "react-responsive";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -51,13 +51,13 @@ const Navbar = () => {
                     height={40}
                     alt="SteadFast Studio Logo"
                 />
-                <img src="/assets/global/logo.svg" width={150} />
+                <span className="text-xl">SteadFast</span>
             </Link>
             {hasMounted && (
                 <nav
-                    className={`text-charcoal font-bold ${
+                    className={`text-charcoal bg-cambridge-blue/10 rounded-full px-8 py-4 font-bold ${
                         isXLScreen
-                            ? "flex gap-x-8 xl:flex xl:flex-row xl:items-center xl:gap-x-8"
+                            ? "flex gap-x-12 xl:flex xl:flex-row xl:items-center xl:justify-around xl:gap-x-8"
                             : `absolute top-24 right-0 left-0 z-20 mx-auto max-w-6xl flex-col items-end text-2xl ${
                                   isOpen
                                       ? "flex min-h-[50dvh] justify-around"
@@ -66,19 +66,21 @@ const Navbar = () => {
                     }`}
                 >
                     {navbarLinks.map((link) => (
-                        <Navlink
+                        <Link
                             key={"navlink" + link.id}
-                            label={link.label}
+                            // label={link.label}
                             href={link.href}
-                        />
+                        >
+                            {link.label}
+                        </Link>
                     ))}
                 </nav>
             )}
             <Link
                 href={"/get-a-quote"}
-                className="hidden gap-1 hover:underline xl:flex xl:items-center xl:justify-center"
+                className="border-cambridge-blue/20 hover:bg-cambridge-blue text-cambridge-blue hidden rounded-full border-4 px-4 py-3 hover:text-white xl:block"
             >
-                Get a Quote <MoveUpRight size={16} />
+                Get a Quote
             </Link>
             <button className="block xl:hidden" onClick={handleToggle}>
                 <span

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins, Baloo_Bhai_2 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,6 +9,18 @@ const inter = Inter({
     variable: "--font-inter",
     subsets: ["latin"],
     weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const poppins = Poppins({
+    variable: "--font-poppins",
+    subsets: ["latin"],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const balooBhai2 = Baloo_Bhai_2({
+    variable: "--font-baloo-bhai-2",
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -96,7 +108,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.variable} bg-white antialiased`}>
+            <body
+                className={`${inter.variable} ${balooBhai2.variable} ${poppins.variable} font-poppins bg-white antialiased`}
+            >
                 <GsapProvider>
                     <Navbar />
                     <main className="m-0 mx-auto w-full py-6">{children}</main>

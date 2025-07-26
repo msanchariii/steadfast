@@ -72,55 +72,44 @@ export default function Hero() {
     }, []);
 
     return (
-        <>
-            <section className="flex min-h-dvh flex-col justify-center">
-                <Image
-                    src={"/assets/global/logo-with-tagline.svg"}
-                    height={300}
-                    width={700}
-                    alt="SteadFast Logo"
-                    className="mt-16"
-                />
-                <div className="mt-16 flex flex-col gap-8 py-8 text-center md:flex-row md:justify-between">
-                    <ul className="flex justify-between gap-8 text-left xl:gap-12">
-                        <li className="stat-list">
-                            <h4 className="text-3xl font-semibold text-black">
-                                99+
-                            </h4>
-                            <h4 className="text-xs font-normal">
-                                Completed Projects
-                            </h4>
-                        </li>
-                        <li className="stat-list">
-                            <h4 className="text-3xl font-semibold text-black">
-                                2+
-                            </h4>
-                            <h4 className="text-xs font-normal">
-                                Years of Experience
-                            </h4>
-                        </li>
-                    </ul>
-                    <p
-                        className="text-charcoal/70 max-w-xl text-left text-xs font-medium tracking-wide md:text-center"
-                        id="hero-description"
-                    >
-                        {sectionDescriptions.hero}
-                    </p>
+        <section className="border-cambridge-blue/20 bg-beige/20 relative flex flex-col items-center justify-center overflow-hidden border-4">
+            <div className="relative z-20 mx-auto flex h-full w-full flex-col lg:flex-row">
+                <div className="order-1 flex basis-1/2 flex-col items-center justify-between gap-4 lg:order-none lg:items-start">
+                    <h1 className="text-7xl">
+                        SteadFast
+                        <br />
+                        <span className="text-5xl tracking-[10px]">
+                            Web Studio
+                        </span>
+                    </h1>
+                    <p className="max-w-lg">{sectionDescriptions.hero}</p>
+                    <button className="text-cambridge-blue lg:bg-cambridge-blue/90 lg:hover:bg-cambridge-blue/80 rounded-full bg-white px-4 py-3 lg:text-white">
+                        Contact Now
+                    </button>
+                    <div className="stat-list flex flex-wrap items-center gap-4">
+                        <SiTailwindcss size={24} className="" />
+                        <FaReact size={24} className="" />
+                        <SiNextdotjs size={24} />
+                        <FaNodeJs size={24} className="" />
+                        <SiExpress size={24} className="" />
+                        <SiFastapi size={24} className="" />
+                        <SiStrapi size={24} className="" />
+                        <SiSanity size={24} className="" />
+                        <DiMongodb size={24} className="" />
+                        <SiPostgresql size={24} className="" />
+                    </div>
                 </div>
-                <div className="mt-24 hidden w-full px-4 text-zinc-700 lg:flex lg:items-center lg:justify-around lg:gap-4 lg:opacity-90">
-                    {/* skills */}
-                    <SiTailwindcss size={48} className="" />
-                    <FaReact size={48} className="" />
-                    <SiNextdotjs size={48} />
-                    <FaNodeJs size={48} className="" />
-                    <SiExpress size={48} className="" />
-                    <SiFastapi size={48} className="" />
-                    <SiStrapi size={48} className="" />
-                    <SiSanity size={48} className="" />
-                    <DiMongodb size={48} className="" />
-                    <SiPostgresql size={48} className="" />
+                <div className="basis-1/2">
+                    <Image
+                        src={"/hero.png"}
+                        alt="hero image"
+                        height={700}
+                        width={700}
+                        className="mx-auto my-4"
+                    />
                 </div>
-            </section>
-        </>
+            </div>
+            <div className="bg-cambridge-blue absolute -top-[25%] -right-[25%] z-10 size-[900px] rounded-full"></div>
+        </section>
     );
 }
