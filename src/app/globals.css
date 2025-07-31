@@ -119,6 +119,11 @@
 
 @theme {
     --color-cambridge-blue: #77ba99;
+    --color-cambridge: #77ba99;
+    --color-cambridge-lighter: #99ccb3;
+    --color-cambridge-lightest: #b3ddc7;
+    --color-cambridge-darker: #5e957a;
+    --color-cambridge-darkest: #47735e;
 }
 
 @layer base {

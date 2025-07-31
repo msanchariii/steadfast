@@ -81,8 +81,10 @@ export const navbarLinks = [
         label: "Home",
         href: "/",
     },
+    { id: 3, label: "Services", href: "/services" },
     { id: 1, label: "Our Works", href: "/works" },
     { id: 2, label: "Pricing", href: "/pricing" },
+    // { id: 4, label: "Contact", href: "/contact" },
 ];
 
 export const footerLinks = [

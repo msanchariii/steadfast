@@ -72,7 +72,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="border-cambridge-blue/20 bg-beige/20 relative flex flex-col items-center justify-center overflow-hidden border-4">
+        <section className="border-cambridge-blue/20 bg-beige/20 relative flex flex-col items-center justify-center overflow-hidden">
             <div className="relative z-20 mx-auto flex h-full w-full flex-col lg:flex-row">
                 <div className="order-1 flex basis-1/2 flex-col items-center justify-between gap-4 lg:order-none lg:items-start">
                     <h1 className="text-7xl">

@@ -55,9 +55,9 @@ const Navbar = () => {
             </Link>
             {hasMounted && (
                 <nav
-                    className={`text-charcoal bg-cambridge-blue/10 rounded-full px-8 py-4 font-bold ${
+                    className={`text-charcoal bg-cambridge-blue/10 px-8 py-4 font-bold ${
                         isXLScreen
-                            ? "flex gap-x-12 xl:flex xl:flex-row xl:items-center xl:justify-around xl:gap-x-8"
+                            ? "flex gap-x-12 rounded-xl xl:flex xl:flex-row xl:items-center xl:justify-around xl:gap-x-8"
                             : `absolute top-24 right-0 left-0 z-20 mx-auto max-w-6xl flex-col items-end text-2xl ${
                                   isOpen
                                       ? "flex min-h-[50dvh] justify-around"
@@ -78,7 +78,7 @@ const Navbar = () => {
             )}
             <Link
                 href={"/get-a-quote"}
-                className="border-cambridge-blue/20 hover:bg-cambridge-blue text-cambridge-blue hidden rounded-full border-4 px-4 py-3 hover:text-white xl:block"
+                className="from-cambridge to-cambridge-lightest hidden rounded-lg bg-linear-to-br px-4 py-3 text-white xl:block"
             >
                 Get a Quote
             </Link>
