@@ -58,7 +58,7 @@ const Navbar = () => {
                     className={`text-charcoal bg-cambridge-blue/10 px-8 py-4 font-bold ${
                         isXLScreen
                             ? "flex gap-x-12 rounded-xl xl:flex xl:flex-row xl:items-center xl:justify-around xl:gap-x-8"
-                            : `absolute top-24 right-0 left-0 z-20 mx-auto max-w-6xl flex-col items-end text-2xl ${
+                            : `absolute top-24 right-0 left-0 z-50 mx-auto max-w-6xl flex-col items-end text-2xl ${
                                   isOpen
                                       ? "flex min-h-[50dvh] justify-around"
                                       : "hidden"

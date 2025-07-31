@@ -109,7 +109,7 @@ export default function Hero() {
                     />
                 </div>
             </div>
-            <div className="bg-cambridge-blue absolute -top-[25%] -right-[25%] z-10 size-[900px] rounded-full"></div>
+            <div className="bg-cambridge-blue absolute -top-[100%] z-10 size-[150%] rounded-full lg:-top-1/4 lg:-right-1/4 lg:size-[900px]"></div>
         </section>
     );
 }
