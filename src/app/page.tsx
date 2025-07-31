@@ -4,7 +4,7 @@ import Hero from "@/components/sections/Hero";
 // import OurTeam from "@/components/sections/OurTeam";
 import Services from "@/components/sections/Services";
 import Showcase from "@/components/sections/Showcase";
-import Testimonial from "@/components/sections/Testimonial";
+// import Testimonial from "@/components/sections/Testimonial";
 import Workflow from "@/components/sections/Workflow";
 // import { GsapProvider } from "@/context/GsapProvider";
 
@@ -16,7 +16,7 @@ export default function Home() {
             <Services />
             <Showcase />
             <Workflow />
-            <Testimonial />
+            {/* <Testimonial /> */}
             {/* <OurTeam /> */}
             <FAQ />
         </>
