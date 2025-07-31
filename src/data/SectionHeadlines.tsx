@@ -41,9 +41,9 @@ export const ServicesHeadline = () => {
 export const FeaturedProjectsHeadline = () => {
     return (
         <SectionHeadlines sectionName="Featured Projects">
-            Real <span className="text-lavender-dark">projects</span>, real{" "}
-            <span className="text-lavender-dark">impact</span> — see what
-            we&apos;ve built.
+            Real <span className="text-cambridge">projects</span>, real{" "}
+            <span className="text-cambridge">impact</span> — see what we&apos;ve
+            built.
         </SectionHeadlines>
     );
 };
