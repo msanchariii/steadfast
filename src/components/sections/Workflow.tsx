@@ -74,11 +74,9 @@ const Workflow = () => {
             >
                 <div className="max-h-dvh xl:basis-1/2">
                     <p className="w-4/5 text-4xl font-bold">
-                        No guesswork, just a{" "}
-                        <span className="text-lavender-dark">clear path</span>{" "}
-                        from
-                        <span className="text-lavender-dark"> ideas</span>→{" "}
-                        <span className="text-lavender-dark">results.</span>
+                        From
+                        <span className="text-cambridge"> ideas</span>→{" "}
+                        <span className="text-cambridge">results.</span>
                     </p>
                 </div>
                 <div
@@ -120,7 +118,7 @@ const WorkflowCard = ({
                 id === "contact"
                     ? "items-center justify-center bg-black"
                     : "bg-white"
-            } h-44 rounded-lg border border-zinc-100`}
+            } h-44 rounded-lg border border-zinc-100 shadow`}
         >
             {id === "contact" ? (
                 <a

@@ -22,8 +22,8 @@ const SectionHeadlines = ({
 export const AboutUsHeadline = () => {
     return (
         <SectionHeadlines sectionName="About Us">
-            We’re a <span className="text-lavender-dark">small team</span>,
-            driven by <span className="text-lavender-dark">big results</span>.
+            We’re a <span className="text-cambridge">small team</span>, driven
+            by <span className="text-cambridge">big results</span>.
         </SectionHeadlines>
     );
 };
@@ -32,7 +32,7 @@ export const ServicesHeadline = () => {
     return (
         <SectionHeadlines sectionName="Services">
             Not just services — we create{" "}
-            <span className="text-lavender-dark">digital experiences</span> that
+            <span className="text-cambridge">digital experiences</span> that
             convert
         </SectionHeadlines>
     );
@@ -52,7 +52,7 @@ export const WorkflowHeadline = () => {
     return (
         <SectionHeadlines sectionName="Workflow">
             No guesswork. Just a clear, proven{" "}
-            <span className="text-lavender-dark">process</span> that works.
+            <span className="text-cambridge">process</span> that works.
         </SectionHeadlines>
     );
 };
@@ -68,8 +68,8 @@ export const TestimonialsHeadline = () => {
 export const OurTeamHeadline = () => {
     return (
         <SectionHeadlines sectionName="Our Team">
-            Meet the <span className="text-lavender-dark">makers</span> behind
-            the code, pixels, and ideas.
+            Meet the <span className="text-cambridge">makers</span> behind the
+            code, pixels, and ideas.
         </SectionHeadlines>
     );
 };

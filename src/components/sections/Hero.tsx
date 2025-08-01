@@ -18,6 +18,7 @@ import {
     SiStrapi,
     SiTailwindcss,
 } from "react-icons/si";
+import Calendly from "../Calendly";
 
 export default function Hero() {
     const titleRef = useRef<HTMLHeadingElement>(null);
@@ -83,9 +84,10 @@ export default function Hero() {
                         </span>
                     </h1>
                     <p className="max-w-lg">{sectionDescriptions.hero}</p>
-                    <button className="text-cambridge-blue lg:bg-cambridge-blue/90 lg:hover:bg-cambridge-blue/80 rounded-full bg-white px-4 py-3 lg:text-white">
+                    {/* <button className="text-cambridge-blue lg:bg-cambridge-blue/90 lg:hover:bg-cambridge-blue/80 rounded-full bg-white px-4 py-3 lg:text-white">
                         Contact Now
-                    </button>
+                    </button> */}
+                    <Calendly />
                     <div className="stat-list flex flex-wrap items-center gap-4">
                         <SiTailwindcss size={24} className="" />
                         <FaReact size={24} className="" />

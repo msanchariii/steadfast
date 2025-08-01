@@ -78,7 +78,7 @@ const Navbar = () => {
             )}
             <Link
                 href={"/get-a-quote"}
-                className="from-cambridge to-cambridge-lightest hidden rounded-lg bg-linear-to-br px-4 py-3 text-white xl:block"
+                className="from-cambridge to-cambridge-darker hidden rounded-lg bg-linear-to-br px-4 py-3 text-white xl:block"
             >
                 Get a Quote
             </Link>
